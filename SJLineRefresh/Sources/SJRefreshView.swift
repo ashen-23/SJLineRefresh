@@ -45,55 +45,13 @@ public class SJRefreshView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        /*
-         CGFloat width = 0;
-         CGFloat height = 0;
-         NSDictionary *rootDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:plist ofType:@"plist"]];
-         NSArray *startPoints = [rootDictionary objectForKey:startPointKey];
-         NSArray *endPoints = [rootDictionary objectForKey:endPointKey];
-         for (int i=0; i<startPoints.count; i++) {
-         
-         CGPoint startPoint = CGPointFromString(startPoints[i]);
-         CGPoint endPoint = CGPointFromString(endPoints[i]);
-         
-         if (startPoint.x > width) width = startPoint.x;
-         if (endPoint.x > width) width = endPoint.x;
-         if (startPoint.y > height) height = startPoint.y;
-         if (endPoint.y > height) height = endPoint.y;
-         }
-         refreshControl.frame = CGRectMake(0, 0, width, height);
-         
-         // Create bar items
-         NSMutableArray *mutableBarItems = [[NSMutableArray alloc] init];
-         for (int i=0; i<startPoints.count; i++) {
-         
-         CGPoint startPoint = CGPointFromString(startPoints[i]);
-         CGPoint endPoint = CGPointFromString(endPoints[i]);
-         
-         BarItem *barItem = [[BarItem alloc] initWithFrame:refreshControl.frame startPoint:startPoint endPoint:endPoint color:color lineWidth:lineWidth];
-         barItem.tag = i;
-         barItem.backgroundColor=[UIColor clearColor];
-         barItem.alpha = 0;
-         [mutableBarItems addObject:barItem];
-         [refreshControl addSubview:barItem];
-         
-         [barItem setHorizontalRandomness:refreshControl.horizontalRandomness dropHeight:refreshControl.dropHeight];
-         }
-         
-         refreshControl.barItems = [NSArray arrayWithArray:mutableBarItems];
-         refreshControl.frame = CGRectMake(0, 0, width, height);
-         refreshControl.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, - dropHeight / 2);
-         for (BarItem *barItem in refreshControl.barItems) {
-         [barItem setupWithFrame:refreshControl.frame];
-         }
-         
-         refreshControl.transform = CGAffineTransformMakeScale(scale, scale);
-         return refreshControl;
-         */
+        initUI()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        initUI()
     }
     
     func initUI() {
@@ -102,12 +60,11 @@ public class SJRefreshView: UIView {
             print("initialize failed")
             return
         }
-        
     }
     
     fileprivate func parsePath() -> Bool {
         
-        guard let aPath = Bundle(for: SJRefreshView.self).path(forResource: "", ofType: "plist") else {
+        guard let aPath = Bundle(for: SJRefreshView.self).path(forResource: "HHMedic", ofType: "plist") else {
             
             print("path not found")
             return false
@@ -150,7 +107,6 @@ public class SJRefreshView: UIView {
             addPathViews(view: aPathView)
             
             aPathView.setRadom()
-            
         }
         
         frame = CGRect(x: 0, y: 0, width: width, height: height)
@@ -181,7 +137,6 @@ public class SJRefreshView: UIView {
         }
         
         removeObserver()
-        
         addObserver()
     }
     
