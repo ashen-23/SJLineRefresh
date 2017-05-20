@@ -12,9 +12,21 @@ public struct SJRefreshConfig {
 
 //    fileprivate var scrollView: UIScrollView?
     public var dropHeight: CGFloat = 0
-    public var animateFactor: CGFloat?
+    public var animateFactor: CGFloat = 0.7
     public var randomness: Int = 0
 
+    public var startRatio: CGFloat = 0.5
+    
+    public var endRatio: CGFloat = 0.8
+    
+    public var loadingOffset: Int = 100
+
+    public var loadingIndividualTime = 0.8
+    
+    public var darkAlpha: CGFloat = 0.4
+
+    public var disappearDuration = 0.4
+    
     public var scale: CGFloat  = 1
     
     var middlePoint = CGPoint.zero

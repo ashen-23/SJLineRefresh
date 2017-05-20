@@ -16,6 +16,7 @@
 		956407E71ECEF4A300ED9239 /* SJPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E61ECEF4A300ED9239 /* SJPathView.swift */; };
 		956407E91ECEF5A900ED9239 /* SJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E81ECEF5A900ED9239 /* SJExtension.swift */; };
 		956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */; };
+		956407EF1ED01DBE00ED9239 /* SJConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407EE1ED01DBE00ED9239 /* SJConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		956407E61ECEF4A300ED9239 /* SJPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJPathView.swift; sourceTree = "<group>"; };
 		956407E81ECEF5A900ED9239 /* SJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJExtension.swift; sourceTree = "<group>"; };
 		956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshConfig.swift; sourceTree = "<group>"; };
+		956407EE1ED01DBE00ED9239 /* SJConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				956407E61ECEF4A300ED9239 /* SJPathView.swift */,
 				956407E81ECEF5A900ED9239 /* SJExtension.swift */,
 				956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */,
+				956407EE1ED01DBE00ED9239 /* SJConstants.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,
+				956407EF1ED01DBE00ED9239 /* SJConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
