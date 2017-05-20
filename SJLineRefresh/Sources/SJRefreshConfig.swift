@@ -10,10 +10,16 @@ import UIKit
 
 public struct SJRefreshConfig {
 
-//    fileprivate var scrollView: UIScrollView?
-    public var dropHeight: CGFloat = 0
-    public var animateFactor: CGFloat = 0.7
-    public var randomness: Int = 0
+    public var dropHeight: CGFloat = 64
+    public var animateFactor: CGFloat = 0
+    public var randomness: Int = 100 {
+        didSet {
+            
+            if randomness <= 0 {
+                randomness = 1
+            }
+        }
+    }
 
     public var startRatio: CGFloat = 0.5
     
@@ -31,7 +37,7 @@ public struct SJRefreshConfig {
     
     var middlePoint = CGPoint.zero
     
-    public var lineWidth: CGFloat = 1
+    public var lineWidth: CGFloat = 1.5
     
     var startPoint = CGPoint.zero
     

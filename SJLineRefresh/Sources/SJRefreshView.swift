@@ -13,7 +13,12 @@ public class SJRefreshView: UIView {
 
     var refreshBlock: (()->Void)?
     
-    lazy var config = SJRefreshConfig()
+    var config = SJRefreshConfig() {
+        didSet {
+            
+            initUI()
+        }
+    }
     
     fileprivate var pullingPercent: CGFloat?
     
@@ -34,24 +39,32 @@ public class SJRefreshView: UIView {
     
     public class func `default`(config: SJRefreshConfig, refreshBlock: @escaping (()->Void)) -> SJRefreshView {
         
-        let aRefreshView = SJRefreshView()
-        
-        aRefreshView.config = config
+        let aRefreshView = SJRefreshView(config: config)
+                
+//        aRefreshView.config = config
         aRefreshView.refreshBlock = refreshBlock
         
         return aRefreshView
     }
     
+    init(config: SJRefreshConfig) {
+        
+        super.init(frame: CGRect.zero)
+        
+        self.config = config
+        initUI()
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        initUI()
+//        initUI()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        initUI()
+//        initUI()
     }
     
     func initUI() {

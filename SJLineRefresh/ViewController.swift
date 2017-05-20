@@ -10,16 +10,51 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    fileprivate var demos: [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        demos = [String]()
+        for i in 0..<20 {
+            demos?.append("this is for test \(i)")
+        }
+        
+        let aConfig = SJRefreshConfig().build {
+            
+            $0.lineColor = UIColor.white
+        }
+        
+        tableView.sj_header = SJRefreshView.default(config: aConfig, refreshBlock: {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { 
+                
+                self.tableView.endRefresh()
+            })
+            
+        })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+
+
+// MARK: - tableView delegate and dataSource
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return demos?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let aCell = tableView.dequeueReusableCell(withIdentifier: "SJTestCell", for: indexPath) as? SJTestCell else { return UITableViewCell() }
+        
+        aCell.centerLabel.text = demos?[indexPath.row]
+        
+        return aCell
+    }
+}
