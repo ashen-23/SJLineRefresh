@@ -13,7 +13,7 @@ public struct SJRefreshConfig {
 //    fileprivate var scrollView: UIScrollView?
     public var dropHeight: CGFloat = 0
     public var animateFactor: CGFloat?
-    public var randomness: CGFloat = 0
+    public var randomness: Int = 0
 
     public var scale: CGFloat  = 1
     
@@ -25,7 +25,6 @@ public struct SJRefreshConfig {
     
     var endPoint = CGPoint.zero {
         didSet {
-            
             middlePoint = CGPoint(x: (startPoint.x + endPoint.x) / 2, y: (startPoint.y + endPoint.y) / 2)
         }
     }
