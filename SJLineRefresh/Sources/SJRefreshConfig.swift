@@ -10,7 +10,7 @@ import UIKit
 
 public struct SJRefreshConfig {
 
-    public var dropHeight: CGFloat = 64
+    public var dropHeight: CGFloat = 100
     public var animateFactor: CGFloat = 0
     public var randomness: Int = 100 {
         didSet {
@@ -21,7 +21,7 @@ public struct SJRefreshConfig {
         }
     }
 
-    public var startRatio: CGFloat = 0.3
+    public var startRatio: CGFloat = 0.15
     
     public var endRatio: CGFloat = 0.9
     

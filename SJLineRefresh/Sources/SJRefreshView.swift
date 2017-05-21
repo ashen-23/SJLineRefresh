@@ -162,14 +162,12 @@ extension SJRefreshView {
     func updatePathView() {
         
         let aPercent = pullingPercent ?? 0
-        
-        print(aPercent)
-        
+                
         for i in 0..<pathViews.count {
             
             let aPathView = pathViews[i]
             
-            let startPadding = (1 - config.animateFactor) / CGFloat(pathViews.count * i)
+            let startPadding = (1 - config.animateFactor) / CGFloat(pathViews.count) * CGFloat(i)
             let endPadding = 1 - config.animateFactor - startPadding
             
             if aPercent == 1 || aPercent >= 1 - endPadding {
