@@ -48,7 +48,7 @@ public class SJPathView: UIView {
     
     func setRadom() {
         
-        translationX = CGFloat(-config.randomness + Int(arc4random()) % config.randomness * 2)
+        translationX = CGFloat(-config.animConfig.randomness + Int(arc4random()) % config.animConfig.randomness * 2)
         transform = CGAffineTransform(translationX: translationX, y: -config.dropHeight)
     }
 

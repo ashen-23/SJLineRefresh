@@ -23,7 +23,12 @@ class ViewController: UIViewController {
             demos?.append("this is for test \(i)")
         }
         
-        let aConfig = SJRefreshConfig().build {
+        guard let aPath = Bundle(for: ViewController.self).path(forResource: "HHMedic", ofType: "plist") else {
+            print("path not found")
+            return
+        }
+        
+        let aConfig = SJRefreshConfig(plist: aPath).build {
             
             $0.lineColor = UIColor.white
         }

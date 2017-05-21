@@ -34,14 +34,10 @@ public class SJRefreshView: UIView {
     
     fileprivate var displayLink: CADisplayLink?
     
-//    fileprivate var dropHeight: CGFloat?
-//    fileprivate var animateFactor: CGFloat?
-    
     public class func `default`(config: SJRefreshConfig, refreshBlock: @escaping (()->Void)) -> SJRefreshView {
         
         let aRefreshView = SJRefreshView(config: config)
                 
-//        aRefreshView.config = config
         aRefreshView.refreshBlock = refreshBlock
         
         return aRefreshView
@@ -58,13 +54,11 @@ public class SJRefreshView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        initUI()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-//        initUI()
     }
     
     func initUI() {
@@ -77,12 +71,7 @@ public class SJRefreshView: UIView {
     
     fileprivate func parsePath() -> Bool {
         
-        guard let aPath = Bundle(for: SJRefreshView.self).path(forResource: "HHMedic", ofType: "plist") else {
-            
-            print("path not found")
-            return false
-        }
-        let aDict = NSDictionary.init(contentsOfFile: aPath)
+        let aDict = NSDictionary.init(contentsOfFile: config.plistPath)
         
         guard let aStarts = aDict?.object(forKey: kStartPoints) as? [String], let aEnds = aDict?.object(forKey: kEndPoints) as? [String]  else { return false }
         
@@ -167,8 +156,8 @@ extension SJRefreshView {
             
             let aPathView = pathViews[i]
             
-            let startPadding = (1 - config.animateFactor) / CGFloat(pathViews.count) * CGFloat(i)
-            let endPadding = 1 - config.animateFactor - startPadding
+            let startPadding = (1 - config.animConfig.animateFactor) / CGFloat(pathViews.count) * CGFloat(i)
+            let endPadding = 1 - config.animConfig.animateFactor - startPadding
             
             if aPercent == 1 || aPercent >= 1 - endPadding {
                 
@@ -180,7 +169,7 @@ extension SJRefreshView {
                 
             } else {
                 
-                let aProgress = aPercent <= startPadding ? 0 : min(1, (aPercent - startPadding) / config.animateFactor)
+                let aProgress = aPercent <= startPadding ? 0 : min(1, (aPercent - startPadding) / config.animConfig.animateFactor)
                 aPathView.transform = CGAffineTransform(translationX: aPathView.translationX * (1 - aProgress), y: config.dropHeight * (1 - aProgress))
                 
                 aPathView.transform = aPathView.transform.rotated(by: CGFloat(Double.pi) * aProgress)
@@ -196,7 +185,7 @@ extension SJRefreshView {
         
         for i in 0..<pathViews.count {
             
-            let aTime = DispatchTime.now()  + DispatchTimeInterval.milliseconds(i * config.loadingOffset)
+            let aTime = DispatchTime.now()  + DispatchTimeInterval.milliseconds(i * config.animConfig.loadingOffset)
             DispatchQueue.main.asyncAfter(deadline: aTime) {
                 
                 self.animateView(view: self.pathViews[i])
@@ -211,7 +200,7 @@ extension SJRefreshView {
             
         view.alpha = 1
         view.layer.removeAllAnimations()
-        UIView.animate(withDuration: config.loadingIndividualTime, animations: { 
+        UIView.animate(withDuration: config.animConfig.loadingIndividualTime, animations: {
             
             view.alpha = self.config.darkAlpha
         })
@@ -230,7 +219,7 @@ extension SJRefreshView {
     func finishLoading() {
         
         // reset inset and offset
-        UIView.animate(withDuration: config.disappearDuration, animations: {
+        UIView.animate(withDuration: config.animConfig.disappearDuration, animations: {
             
             guard let aScrollView = self.scrollView else { return }
             var aInset = aScrollView.contentInset
@@ -354,15 +343,15 @@ extension SJRefreshView {
     // redic pulling percent
     fileprivate func redict(pullingPercent: CGFloat) {
         
-        if pullingPercent <= config.startRatio {
+        if pullingPercent <= config.animConfig.startRatio {
             self.pullingPercent = 0
             
-        } else if  pullingPercent >= config.endRatio {
+        } else if  pullingPercent >= config.animConfig.endRatio {
             self.pullingPercent = 1
             
         } else {
             
-            self.pullingPercent = (pullingPercent - config.startRatio) / (config.endRatio - pullingPercent)
+            self.pullingPercent = (pullingPercent - config.animConfig.startRatio) / (config.animConfig.endRatio - pullingPercent)
         }
     }
     

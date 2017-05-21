@@ -8,47 +8,65 @@
 
 import UIKit
 
+/// refresh parameters
 public struct SJRefreshConfig {
 
+    /// animation configuration parameter
+    public var animConfig = SJAnimateConfig()
+    
+    /// scrollview drop down height
     public var dropHeight: CGFloat = 100
-    public var animateFactor: CGFloat = 0
-    public var randomness: Int = 100 {
-        didSet {
-            
-            if randomness <= 0 {
-                randomness = 1
-            }
-        }
-    }
 
-    public var startRatio: CGFloat = 0.15
+    /// path for plist file with line points
+    public var plistPath = ""
     
-    public var endRatio: CGFloat = 0.9
-    
-    public var loadingOffset: Int = 100
-
-    public var loadingIndividualTime = 0.8
-    
+    /// default path alpha
     public var darkAlpha: CGFloat = 0.4
-
-    public var disappearDuration = 0.4
     
+    /// scale
     public var scale: CGFloat  = 1
     
-    var middlePoint = CGPoint.zero
     
+    //MARK: - path's parameter
+    
+    /// path's line width
     public var lineWidth: CGFloat = 1.5
     
+    /// path's line Color
+    public var lineColor: UIColor?
+    
+    /// path's line start point
     var startPoint = CGPoint.zero
     
+    /// path's line end point
     var endPoint = CGPoint.zero {
         didSet {
             middlePoint = CGPoint(x: (startPoint.x + endPoint.x) / 2, y: (startPoint.y + endPoint.y) / 2)
         }
     }
     
-    public var lineColor: UIColor?
+    /// pathView.s line middle point
+    var middlePoint = CGPoint.zero
     
+    public init() {
+    
+    }
+    
+    
+    /// init
+    ///
+    /// - Parameter plist: path for plist file with line points
+    public init(plist: String) {
+        
+        plistPath = plist
+        
+    }
+    
+    
+    /// config refresh parameters
+    ///
+    /// - Parameter block: $0.parameter = value
+    /// - Returns: SJRefreshConfig
     public func build(_ block: (inout SJRefreshConfig) -> Void) -> SJRefreshConfig {
         var copy = self
         block(&copy)
