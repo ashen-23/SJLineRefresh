@@ -21,9 +21,9 @@ public struct SJRefreshConfig {
         }
     }
 
-    public var startRatio: CGFloat = 0.5
+    public var startRatio: CGFloat = 0.3
     
-    public var endRatio: CGFloat = 0.8
+    public var endRatio: CGFloat = 0.9
     
     public var loadingOffset: Int = 100
 

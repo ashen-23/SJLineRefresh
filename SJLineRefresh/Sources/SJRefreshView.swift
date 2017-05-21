@@ -163,6 +163,8 @@ extension SJRefreshView {
         
         let aPercent = pullingPercent ?? 0
         
+        print(aPercent)
+        
         for i in 0..<pathViews.count {
             
             let aPathView = pathViews[i]
@@ -240,6 +242,7 @@ extension SJRefreshView {
         }) { (finished) in
             
             self.state = .idle
+//            self.pathViews.forEach{$0.removeFromSuperview()}
             self.displayLink?.invalidate()
         }
 
@@ -288,7 +291,8 @@ extension SJRefreshView {
             
             if window == nil { return }
             
-            var insetTop = aScrollView.contentOffset.y > originalInset.top ? -aScrollView.contentOffset.y : originalInset.top
+            var insetTop = max(-aScrollView.contentOffset.y, originalInset.top)
+                
             insetTop = min(config.dropHeight + originalInset.top, insetTop)
             
             var aInset = aScrollView.contentInset
@@ -313,10 +317,10 @@ extension SJRefreshView {
         
             redict(pullingPercent: pullingPercent)
             
-            if state == .idle && currentOffY < normalOffY { // will refresh
+            if state == .idle {
                 
-                state = .pulling
                 updatePathView()
+                if currentOffY < normalOffY { state = .pulling } // will refresh
                 
             } else if state == .pulling && currentOffY >= normalOffY { // normal
                 

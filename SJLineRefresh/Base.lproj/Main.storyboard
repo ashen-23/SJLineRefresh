@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="87d-rD-i5V">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.16862745098039217" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SJTestCell" id="Vkl-RL-Vtt" customClass="SJTestCell" customModule="SJLineRefresh" customModuleProvider="target">
@@ -58,8 +58,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="87d-rD-i5V" secondAttribute="bottom" id="E5j-Bz-naO"/>
-                            <constraint firstItem="87d-rD-i5V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OyX-xq-IjI"/>
                             <constraint firstItem="87d-rD-i5V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l8g-n6-oCa"/>
+                            <constraint firstItem="87d-rD-i5V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nCV-ad-hqF"/>
                             <constraint firstAttribute="trailing" secondItem="87d-rD-i5V" secondAttribute="trailing" id="vsE-jf-e9H"/>
                         </constraints>
                     </view>
@@ -69,6 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
