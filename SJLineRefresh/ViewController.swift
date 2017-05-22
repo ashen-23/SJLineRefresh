@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         let aConfig = SJRefreshConfig(plist: aPath).build {
             
             $0.lineColor = UIColor.white
+            $0.backImg = UIImage(named: "backImg")
         }
         
         tableView.sj_header = SJRefreshView.default(config: aConfig, refreshBlock: {

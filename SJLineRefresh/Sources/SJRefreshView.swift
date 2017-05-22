@@ -71,9 +71,9 @@ public class SJRefreshView: UIView {
     
     fileprivate func parsePath() -> Bool {
         
-        let aDict = NSDictionary.init(contentsOfFile: config.plistPath)
+        let points = SJPointsManager.default.fetchPoints(path: config.plistPath)
         
-        guard let aStarts = aDict?.object(forKey: kStartPoints) as? [String], let aEnds = aDict?.object(forKey: kEndPoints) as? [String]  else { return false }
+        guard let aStarts = points.0, let aEnds = points.1  else { return false }
         
         if aEnds.count != aStarts.count {
             
@@ -89,8 +89,8 @@ public class SJRefreshView: UIView {
             let aStart = CGPointFromString(aStarts[i])
             let aEnd = CGPointFromString(aEnds[i])
             
-            width = max(width, aStart.x, aEnd.x)
-            height = max(height, aStart.y, aEnd.y)
+            width = max(width, aStart.x, aEnd.x) + config.lineWidth * 2
+            height = max(height, aStart.y, aEnd.y) + config.lineWidth * 2
         }
         frame = CGRect(x: 0, y: 0, width: width, height: height)
             
@@ -110,6 +110,15 @@ public class SJRefreshView: UIView {
             
             aPathView.setRadom()
         }
+        
+        if let aBackImg = config.backImg {
+            
+            let aImgView = UIImageView(image: aBackImg)
+            
+            aImgView.center = config.imgCenterOffset ?? self.center
+            insertSubview(aImgView, at: 0)
+        }
+        
         
         frame = CGRect(x: 0, y: 0, width: width, height: height)
         center = CGPoint(x: SJScreenWidth / 2, y: -config.dropHeight / 2)

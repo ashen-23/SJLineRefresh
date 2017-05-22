@@ -15,7 +15,7 @@ public struct SJRefreshConfig {
     public var animConfig = SJAnimateConfig()
     
     /// scrollview drop down height
-    public var dropHeight: CGFloat = 100
+    public var dropHeight: CGFloat = 64
 
     /// path for plist file with line points
     public var plistPath = ""
@@ -26,6 +26,9 @@ public struct SJRefreshConfig {
     /// scale
     public var scale: CGFloat  = 1
     
+    public var backImg: UIImage?
+    
+    public var imgCenterOffset : CGPoint?
     
     //MARK: - path's parameter
     
@@ -52,7 +55,6 @@ public struct SJRefreshConfig {
     
     }
     
-    
     /// init
     ///
     /// - Parameter plist: path for plist file with line points
@@ -61,7 +63,6 @@ public struct SJRefreshConfig {
         plistPath = plist
         
     }
-    
     
     /// config refresh parameters
     ///
