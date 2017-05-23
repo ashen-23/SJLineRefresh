@@ -21,7 +21,7 @@ public struct SJRefreshConfig {
     public var plistPath = ""
     
     /// default path alpha
-    public var darkAlpha: CGFloat = 0.4
+    public var darkAlpha: CGFloat = 0.25
     
     /// scale
     public var scale: CGFloat  = 1
@@ -33,7 +33,7 @@ public struct SJRefreshConfig {
     //MARK: - path's parameter
     
     /// path's line width
-    public var lineWidth: CGFloat = 1.5
+    public var lineWidth: CGFloat = 0.5
     
     /// path's line Color
     public var lineColor: UIColor?

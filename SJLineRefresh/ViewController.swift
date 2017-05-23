@@ -23,25 +23,13 @@ class ViewController: UIViewController {
             demos?.append("this is for test \(i)")
         }
         
-        guard let aPath = Bundle(for: ViewController.self).path(forResource: "HHMedic", ofType: "plist") else {
-            print("path not found")
-            return
-        }
-        
-        let aConfig = SJRefreshConfig(plist: aPath).build {
-            
-            $0.lineColor = UIColor.white
-            $0.backImg = UIImage(named: "backImg")
-        }
-        
-        tableView.sj_header = SJRefreshView.default(config: aConfig, refreshBlock: {
+        tableView.sj_header = SJRefreshView.default {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { 
                 
                 self.tableView.endRefresh()
             })
-            
-        })
+        }
     }
 }
 

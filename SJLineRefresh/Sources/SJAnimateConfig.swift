@@ -10,9 +10,9 @@ import UIKit
 
 public struct SJAnimateConfig {
 
-    public var startRatio: CGFloat = 0.15
+    public var startRatio: CGFloat = 0.5
     
-    public var endRatio: CGFloat = 0.9
+    public var endRatio: CGFloat = 1
     
     public var loadingOffset: Int = 100
     
