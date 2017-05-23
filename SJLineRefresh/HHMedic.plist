@@ -4,23 +4,23 @@
 <dict>
 	<key>startPoints</key>
 	<array>
-		<string>{23,0}</string>
-		<string>{45.52,13}</string>
-		<string>{45.52,39}</string>
-		<string>{23,52}</string>
-		<string>{0.48, 39}</string>
-		<string>{0.48, 13}</string>
-		<string>{23,0}</string>
+		<string>{16,1.25}</string>
+		<string>{30.51,9.62}</string>
+		<string>{30.51,26.37}</string>
+		<string>{16,34.75}</string>
+		<string>{1.49, 26.38}</string>
+		<string>{1.49, 9.63}</string>
+		<string>{16,1.25}</string>
 	</array>
 	<key>endPoints</key>
 	<array>
-		<string>{45.52,13}</string>
-		<string>{45.52,39}</string>
-		<string>{23,52}</string>
-		<string>{0.48, 39}</string>
-		<string>{0.48, 13}</string>
-		<string>{23,0}</string>
-		<string>{23,0}</string>
+		<string>{30.51,9.62}</string>
+		<string>{30.51,26.37}</string>
+		<string>{16,34.75}</string>
+		<string>{1.49, 26.38}</string>
+		<string>{1.49, 9.63}</string>
+		<string>{16,1.25}</string>
+		<string>{16,1.25}</string>
 	</array>
 </dict>
 </plist>

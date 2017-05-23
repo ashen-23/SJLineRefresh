@@ -21,6 +21,7 @@
 		956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */; };
 		956407F51ED05C0100ED9239 /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F41ED05C0100ED9239 /* SJTestCell.swift */; };
 		956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
+		95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */; };
 		95DA684B1ED29998003FAB74 /* SJPointsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJPointsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJScrollViewExtention.swift; sourceTree = "<group>"; };
 		956407F41ED05C0100ED9239 /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTestCell.swift; sourceTree = "<group>"; };
 		956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAnimateConfig.swift; sourceTree = "<group>"; };
+		95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SJLineRefresh.bundle; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJPointsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJPointsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 		956407E21ECEF46800ED9239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				956407F11ED0540100ED9239 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
+				95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

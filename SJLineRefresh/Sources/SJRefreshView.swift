@@ -34,20 +34,24 @@ public class SJRefreshView: UIView {
     
     fileprivate var displayLink: CADisplayLink?
     
-    public class func `default`(config: SJRefreshConfig, refreshBlock: @escaping (()->Void)) -> SJRefreshView {
+    public class func `default`(refreshBlock: @escaping (()->Void)) -> SJRefreshView {
         
-        let aRefreshView = SJRefreshView(config: config)
-                
-        aRefreshView.refreshBlock = refreshBlock
+        let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
+        let aConfig = SJRefreshConfig(plist: aPath).build {
+            
+            $0.lineColor = UIColor(red:47.0/255,green:148.0/255,blue:255.0/255,alpha:1)
+            $0.backImg = getImage(name: "hh_loading_back@3x")
+        }
         
-        return aRefreshView
+        return SJRefreshView(config: aConfig, refresh: refreshBlock)
     }
     
-    init(config: SJRefreshConfig) {
+    public init(config: SJRefreshConfig, refresh: @escaping ()->Void) {
         
         super.init(frame: CGRect.zero)
         
         self.config = config
+        self.refreshBlock = refresh
         initUI()
     }
     
@@ -89,9 +93,13 @@ public class SJRefreshView: UIView {
             let aStart = CGPointFromString(aStarts[i])
             let aEnd = CGPointFromString(aEnds[i])
             
-            width = max(width, aStart.x, aEnd.x) + config.lineWidth * 2
-            height = max(height, aStart.y, aEnd.y) + config.lineWidth * 2
+            width = max(width, aStart.x, aEnd.x)
+            height = max(height, aStart.y, aEnd.y)
         }
+        
+        width += config.lineWidth
+        height += config.lineWidth
+        
         frame = CGRect(x: 0, y: 0, width: width, height: height)
             
         // create path view

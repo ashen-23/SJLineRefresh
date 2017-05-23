@@ -5,7 +5,7 @@
 //  Created by Shi Jian on 2017/5/20.
 //  Copyright © 2017年 Shi Jian. All rights reserved.
 //
-
+import UIKit
 
 let kStartPoints = "startPoints"
 
@@ -20,4 +20,24 @@ public enum SJRefreshState: Int {
     case pulling
     case refresing
     case finish
+}
+
+
+// 获取当前组件的bundle
+func getCurrentBundle() -> Bundle
+{
+    return Bundle(for: SJRefreshView.self)
+}
+
+func getResourceBundle() -> Bundle {
+    
+    let aURl = getCurrentBundle().url(forResource: "SJLineRefresh", withExtension: "bundle")!
+    
+    return Bundle(url: aURl)!
+}
+
+func getImage(name: String) -> UIImage {
+    
+    guard let aPath = getResourceBundle().path(forResource: name, ofType: "png") else { return UIImage() }
+    return UIImage(contentsOfFile: aPath) ?? UIImage()
 }
