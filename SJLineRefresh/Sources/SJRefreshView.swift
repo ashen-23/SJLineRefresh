@@ -13,12 +13,7 @@ public class SJRefreshView: UIView {
 
     var refreshBlock: (()->Void)?
     
-    var config = SJRefreshConfig() {
-        didSet {
-            
-            initUI()
-        }
-    }
+    var config = SJRefreshConfig()
     
     fileprivate var pullingPercent: CGFloat?
     
@@ -31,9 +26,7 @@ public class SJRefreshView: UIView {
     lazy fileprivate var originalInset = UIEdgeInsets.zero
     
     var state = SJRefreshState.idle
-    
-    fileprivate var displayLink: CADisplayLink?
-    
+        
     public class func `default`(refreshBlock: @escaping (()->Void)) -> SJRefreshView {
         
         let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
@@ -52,7 +45,6 @@ public class SJRefreshView: UIView {
         
         self.config = config
         self.refreshBlock = refresh
-        initUI()
     }
     
     public override init(frame: CGRect) {
@@ -123,7 +115,7 @@ public class SJRefreshView: UIView {
             
             let aImgView = UIImageView(image: aBackImg)
             
-            aImgView.center = config.imgCenterOffset ?? self.center
+            aImgView.center = CGPoint(x: self.center.x + config.centerOffset.x, y: self.center.y + config.centerOffset.y)
             insertSubview(aImgView, at: 0)
         }
         
@@ -157,6 +149,15 @@ public class SJRefreshView: UIView {
         
         removeObserver()
         addObserver()
+        
+        initUI()
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        guard let aScroll = scrollView else { return }
+        center = CGPoint(x: aScroll.bounds.size.width / 2 + config.centerOffset.x, y: -config.dropHeight / 2 + config.centerOffset.y)
     }
     
 }
@@ -164,6 +165,31 @@ public class SJRefreshView: UIView {
 
 // MARK: - UIView Animation
 extension SJRefreshView {
+    
+    func startRefresh() {
+        
+        guard let aScrollView = scrollView else { return }
+        state = .refresing
+        pullingPercent = 1
+        updatePathView()
+        DispatchQueue.main.async {
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                let aTop = self.originalInset.top + self.config.dropHeight
+                var aInset = aScrollView.contentInset
+                aInset.top = aTop
+                aScrollView.contentInset = aInset
+                
+                self.scrollView?.setContentOffset(CGPoint(x: 0, y: -aTop), animated: true)
+                
+            }, completion: { [weak self] (finish) in
+                
+                self?.refreshBlock?()
+            })
+        }
+        
+        loadingAnimation()
+    }
     
     func updatePathView() {
         
@@ -246,17 +272,12 @@ extension SJRefreshView {
         }) { (finished) in
             
             self.state = .idle
-//            self.pathViews.forEach{$0.removeFromSuperview()}
-            self.displayLink?.invalidate()
         }
 
         pathViews.forEach { (aPathView) in
             aPathView.layer.removeAllAnimations()
             aPathView.alpha = config.darkAlpha
         }
-        
-        displayLink = CADisplayLink(target: self, selector: #selector(SJRefreshView.animateDisappear))
-        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
     }
     
 }
@@ -296,13 +317,7 @@ extension SJRefreshView {
             if window == nil { return }
             
             var insetTop = max(-aScrollView.contentOffset.y, originalInset.top)
-                
             insetTop = min(config.dropHeight + originalInset.top, insetTop)
-            
-            var aInset = aScrollView.contentInset
-            aInset.top = insetTop
-            
-            scrollView?.contentInset = aInset
             
             insetTDelta = originalInset.top - insetTop
             return

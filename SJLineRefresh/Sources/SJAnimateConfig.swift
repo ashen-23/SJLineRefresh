@@ -10,7 +10,7 @@ import UIKit
 
 public struct SJAnimateConfig {
 
-    public var startRatio: CGFloat = 0.5
+    public var startRatio: CGFloat = 0.2
     
     public var endRatio: CGFloat = 1
     
@@ -20,9 +20,9 @@ public struct SJAnimateConfig {
     
     public var disappearDuration = 0.4
 
-    public var animateFactor: CGFloat = 0
+    public var animateFactor: CGFloat = 0.9
 
-    public var randomness: Int = 100 {
+    public var randomness: Int = 150 {
         didSet {
             
             if randomness <= 0 {

@@ -17,6 +17,9 @@ public struct SJRefreshConfig {
     /// scrollview drop down height
     public var dropHeight: CGFloat = 64
 
+    /// pathView's center offset
+    public var centerOffset = CGPoint.zero
+    
     /// path for plist file with line points
     public var plistPath = ""
     
@@ -28,7 +31,7 @@ public struct SJRefreshConfig {
     
     public var backImg: UIImage?
     
-    public var imgCenterOffset : CGPoint?
+//    public var imgCenterOffset : CGPoint?
     
     //MARK: - path's parameter
     
