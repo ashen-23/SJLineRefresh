@@ -12,6 +12,9 @@ class SJDemoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    /// config
+    var mConfig = SJRefreshConfig()
+    
     fileprivate var demos: [String]?
     
     override func viewDidLoad() {

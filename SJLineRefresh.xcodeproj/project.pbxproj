@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9527656F1ED6F166003B14AB /* SJDemoListController.swift */; };
 		956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407D01ECEF3AE00ED9239 /* AppDelegate.swift */; };
 		956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956407D41ECEF3AE00ED9239 /* Main.storyboard */; };
 		956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956407D71ECEF3AE00ED9239 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9527656F1ED6F166003B14AB /* SJDemoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoListController.swift; sourceTree = "<group>"; };
 		956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJLineRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956407D01ECEF3AE00ED9239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956407D51ECEF3AE00ED9239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		958AAA161ED6EDF500E4F512 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9527656F1ED6F166003B14AB /* SJDemoListController.swift */,
 				958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */,
 				958AAA191ED6EE5400E4F512 /* SJTestCell.swift */,
 			);
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958AAA1C1ED6EE5400E4F512 /* SJDemoController.swift in Sources */,
+				952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */,
 				956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */,
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
