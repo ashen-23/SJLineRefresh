@@ -8,42 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407D01ECEF3AE00ED9239 /* AppDelegate.swift */; };
-		956407D31ECEF3AE00ED9239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407D21ECEF3AE00ED9239 /* ViewController.swift */; };
 		956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956407D41ECEF3AE00ED9239 /* Main.storyboard */; };
 		956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956407D71ECEF3AE00ED9239 /* Assets.xcassets */; };
 		956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956407D91ECEF3AE00ED9239 /* LaunchScreen.storyboard */; };
 		956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E41ECEF47C00ED9239 /* SJRefreshView.swift */; };
-		956407E71ECEF4A300ED9239 /* SJPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E61ECEF4A300ED9239 /* SJPathView.swift */; };
-		956407E91ECEF5A900ED9239 /* SJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E81ECEF5A900ED9239 /* SJExtension.swift */; };
+		956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E61ECEF4A300ED9239 /* SJLinePathView.swift */; };
 		956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */; };
 		956407EF1ED01DBE00ED9239 /* SJConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407EE1ED01DBE00ED9239 /* SJConstants.swift */; };
-		956407F11ED0540100ED9239 /* HHMedic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 956407F01ED0540100ED9239 /* HHMedic.plist */; };
 		956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */; };
-		956407F51ED05C0100ED9239 /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F41ED05C0100ED9239 /* SJTestCell.swift */; };
 		956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
 		95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */; };
-		95DA684B1ED29998003FAB74 /* SJPointsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJPointsManager.swift */; };
+		958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958AAA171ED6EE3100E4F512 /* HHMedic.plist */; };
+		958AAA1B1ED6EE5400E4F512 /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA191ED6EE5400E4F512 /* SJTestCell.swift */; };
+		958AAA1C1ED6EE5400E4F512 /* SJDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */; };
+		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJLineRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956407D01ECEF3AE00ED9239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		956407D21ECEF3AE00ED9239 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		956407D51ECEF3AE00ED9239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		956407D71ECEF3AE00ED9239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		956407DA1ECEF3AE00ED9239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		956407DC1ECEF3AE00ED9239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956407E41ECEF47C00ED9239 /* SJRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshView.swift; sourceTree = "<group>"; };
-		956407E61ECEF4A300ED9239 /* SJPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJPathView.swift; sourceTree = "<group>"; };
-		956407E81ECEF5A900ED9239 /* SJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJExtension.swift; sourceTree = "<group>"; };
+		956407E61ECEF4A300ED9239 /* SJLinePathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJLinePathView.swift; sourceTree = "<group>"; };
 		956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshConfig.swift; sourceTree = "<group>"; };
 		956407EE1ED01DBE00ED9239 /* SJConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConstants.swift; sourceTree = "<group>"; };
-		956407F01ED0540100ED9239 /* HHMedic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HHMedic.plist; sourceTree = "<group>"; };
 		956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJScrollViewExtention.swift; sourceTree = "<group>"; };
-		956407F41ED05C0100ED9239 /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTestCell.swift; sourceTree = "<group>"; };
 		956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAnimateConfig.swift; sourceTree = "<group>"; };
 		95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SJLineRefresh.bundle; sourceTree = "<group>"; };
-		95DA684A1ED29998003FAB74 /* SJPointsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJPointsManager.swift; sourceTree = "<group>"; };
+		958AAA171ED6EE3100E4F512 /* HHMedic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HHMedic.plist; sourceTree = "<group>"; };
+		958AAA191ED6EE5400E4F512 /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTestCell.swift; sourceTree = "<group>"; };
+		958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoController.swift; sourceTree = "<group>"; };
+		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +74,11 @@
 		956407CF1ECEF3AE00ED9239 /* SJLineRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				958AAA161ED6EDF500E4F512 /* Demo */,
 				956407E31ECEF46D00ED9239 /* Sources */,
 				956407E21ECEF46800ED9239 /* Resources */,
 				956407D01ECEF3AE00ED9239 /* AppDelegate.swift */,
-				956407D21ECEF3AE00ED9239 /* ViewController.swift */,
-				956407F41ED05C0100ED9239 /* SJTestCell.swift */,
 				956407D41ECEF3AE00ED9239 /* Main.storyboard */,
-				956407F01ED0540100ED9239 /* HHMedic.plist */,
 				956407D71ECEF3AE00ED9239 /* Assets.xcassets */,
 				956407D91ECEF3AE00ED9239 /* LaunchScreen.storyboard */,
 				956407DC1ECEF3AE00ED9239 /* Info.plist */,
@@ -93,6 +89,7 @@
 		956407E21ECEF46800ED9239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				958AAA171ED6EE3100E4F512 /* HHMedic.plist */,
 				95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */,
 			);
 			path = Resources;
@@ -102,15 +99,23 @@
 			isa = PBXGroup;
 			children = (
 				956407E41ECEF47C00ED9239 /* SJRefreshView.swift */,
-				956407E61ECEF4A300ED9239 /* SJPathView.swift */,
-				956407E81ECEF5A900ED9239 /* SJExtension.swift */,
+				956407E61ECEF4A300ED9239 /* SJLinePathView.swift */,
 				956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */,
 				956407EE1ED01DBE00ED9239 /* SJConstants.swift */,
 				956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */,
 				956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */,
-				95DA684A1ED29998003FAB74 /* SJPointsManager.swift */,
+				95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		958AAA161ED6EDF500E4F512 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */,
+				958AAA191ED6EE5400E4F512 /* SJTestCell.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
-				956407F11ED0540100ED9239 /* HHMedic.plist in Resources */,
+				958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
 				95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
@@ -188,16 +193,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				956407E71ECEF4A300ED9239 /* SJPathView.swift in Sources */,
-				956407E91ECEF5A900ED9239 /* SJExtension.swift in Sources */,
-				956407D31ECEF3AE00ED9239 /* ViewController.swift in Sources */,
-				956407F51ED05C0100ED9239 /* SJTestCell.swift in Sources */,
+				958AAA1C1ED6EE5400E4F512 /* SJDemoController.swift in Sources */,
+				956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */,
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
+				958AAA1B1ED6EE5400E4F512 /* SJTestCell.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,
 				956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */,
-				95DA684B1ED29998003FAB74 /* SJPointsManager.swift in Sources */,
+				95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */,
 				956407EF1ED01DBE00ED9239 /* SJConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

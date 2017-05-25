@@ -13,7 +13,6 @@ let kEndPoints = "endPoints"
 
 let kScrollviewContentPffset = "contentOffset"
 
-
 public enum SJRefreshState: Int {
     
     case idle = 0
@@ -40,4 +39,51 @@ func getImage(name: String) -> UIImage {
     
     guard let aPath = getResourceBundle().path(forResource: name, ofType: "png") else { return UIImage() }
     return UIImage(contentsOfFile: aPath) ?? UIImage()
+}
+
+
+extension CGRect {
+    
+    var sj_width: CGFloat {
+        
+        get {
+            return size.width
+        }
+        set {
+            size.width = newValue
+        }
+    }
+    
+    var sj_height: CGFloat {
+        
+        get {
+            return size.height
+        }
+        set {
+            size.height = newValue
+        }
+    }
+    
+    var sj_x: CGFloat {
+        
+        get {
+            return origin.x
+        }
+        
+        set {
+            origin.x = newValue
+        }
+    }
+    
+    var sj_y: CGFloat {
+        
+        get {
+            return origin.y
+        }
+        
+        set {
+            origin.y = newValue
+        }
+    }
+    
 }

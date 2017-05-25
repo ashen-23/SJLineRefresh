@@ -1,5 +1,5 @@
 //
-//  SJPathView.swift
+//  SJLinePathView.swift
 //  SJLineRefresh
 //
 //  Created by Shi Jian on 2017/5/19.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-
-public class SJPathView: UIView {
+/// a line from start point to end point
+public class SJLinePathView: UIView {
 
     public lazy var config = SJRefreshConfig()
     

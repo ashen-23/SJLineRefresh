@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SJDemoViewController.swift
 //  SJLineRefresh
 //
 //  Created by Shi Jian on 2017/5/19.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SJDemoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     
     fileprivate var demos: [String]?
     
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
 
 
 // MARK: - tableView delegate and dataSource
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

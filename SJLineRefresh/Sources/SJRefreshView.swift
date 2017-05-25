@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+/// refresh view
 public class SJRefreshView: UIView {
 
     var refreshBlock: (()->Void)?
@@ -21,7 +21,7 @@ public class SJRefreshView: UIView {
     
     fileprivate var scrollView: UIScrollView?
     
-    lazy fileprivate var pathViews = [SJPathView]()
+    lazy fileprivate var pathViews = [SJLinePathView]()
     
     lazy fileprivate var originalInset = UIEdgeInsets.zero
     
@@ -29,14 +29,7 @@ public class SJRefreshView: UIView {
         
     public class func `default`(refreshBlock: @escaping (()->Void)) -> SJRefreshView {
         
-        let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
-        let aConfig = SJRefreshConfig(plist: aPath).build {
-            
-            $0.lineColor = UIColor(red:47.0/255,green:148.0/255,blue:255.0/255,alpha:1)
-            $0.backImg = getImage(name: "hh_loading_back@3x")
-        }
-        
-        return SJRefreshView(config: aConfig, refresh: refreshBlock)
+        return SJRefreshView(config: SJRefreshManager.default.defaultConfig, refresh: refreshBlock)
     }
     
     public init(config: SJRefreshConfig, refresh: @escaping ()->Void) {
@@ -67,10 +60,11 @@ public class SJRefreshView: UIView {
     
     fileprivate func parsePath() -> Bool {
         
-        let points = SJPointsManager.default.fetchPoints(path: config.plistPath)
+        let points = SJRefreshManager.default.fetchPoints(path: config.plistPath)
         
         guard let aStarts = points.0, let aEnds = points.1  else { return false }
-        
+        guard let aScrollView = scrollView else { return false }
+
         if aEnds.count != aStarts.count {
             
             print("para count must is equal")
@@ -101,7 +95,7 @@ public class SJRefreshView: UIView {
             aConfig.startPoint = CGPointFromString(aStarts[i])
             aConfig.endPoint = CGPointFromString(aEnds[i])
             
-            let aPathView = SJPathView(frame: frame, config: aConfig)
+            let aPathView = SJLinePathView(frame: frame, config: aConfig)
             aPathView.tag = i
             aPathView.backgroundColor = UIColor.clear
             aPathView.alpha = 0
@@ -109,30 +103,30 @@ public class SJRefreshView: UIView {
             addPathViews(view: aPathView)
             
             aPathView.setRadom()
+            
+            aPathView.setUp()
         }
         
         if let aBackImg = config.backImg {
             
             let aImgView = UIImageView(image: aBackImg)
-            
             aImgView.center = CGPoint(x: self.center.x + config.centerOffset.x, y: self.center.y + config.centerOffset.y)
             insertSubview(aImgView, at: 0)
         }
         
-        
         frame = CGRect(x: 0, y: 0, width: width, height: height)
-        center = CGPoint(x: SJScreenWidth / 2, y: -config.dropHeight / 2)
+        center = CGPoint(x: aScrollView.bounds.size.width / 2 + config.centerOffset.x, y: -config.dropHeight / 2 + config.centerOffset.y)
     
-        pathViews.forEach { (aView) in
-            aView.setUp()
-        }
+//        pathViews.forEach { (aView) in
+//            aView.setUp()
+//        }
         
         transform = CGAffineTransform(scaleX: config.scale, y: config.scale)
 
         return true
     }
     
-    fileprivate func addPathViews(view: SJPathView) {
+    fileprivate func addPathViews(view: SJLinePathView) {
         
         addSubview(view)
         pathViews.append(view)
@@ -237,7 +231,7 @@ extension SJRefreshView {
         
     }
     
-    func animateView(view: SJPathView) {
+    func animateView(view: SJLinePathView) {
         
         if state != .refresing { return }
             
