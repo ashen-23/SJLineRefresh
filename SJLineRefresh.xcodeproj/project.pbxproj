@@ -20,7 +20,6 @@
 		956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
 		95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */; };
 		958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958AAA171ED6EE3100E4F512 /* HHMedic.plist */; };
-		958AAA1B1ED6EE5400E4F512 /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA191ED6EE5400E4F512 /* SJTestCell.swift */; };
 		958AAA1C1ED6EE5400E4F512 /* SJDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */; };
 		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAnimateConfig.swift; sourceTree = "<group>"; };
 		95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SJLineRefresh.bundle; sourceTree = "<group>"; };
 		958AAA171ED6EE3100E4F512 /* HHMedic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HHMedic.plist; sourceTree = "<group>"; };
-		958AAA191ED6EE5400E4F512 /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTestCell.swift; sourceTree = "<group>"; };
 		958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoController.swift; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +114,6 @@
 			children = (
 				9527656F1ED6F166003B14AB /* SJDemoListController.swift */,
 				958AAA1A1ED6EE5400E4F512 /* SJDemoController.swift */,
-				958AAA191ED6EE5400E4F512 /* SJTestCell.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -147,6 +144,7 @@
 		956407C51ECEF3AE00ED9239 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SJ;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Shi Jian";
@@ -201,7 +199,6 @@
 				956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */,
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
-				958AAA1B1ED6EE5400E4F512 /* SJTestCell.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,
 				956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */,

@@ -28,11 +28,22 @@ class SJDemoViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { 
                 
-                self.tableView.endRefresh()
+                self.refreshFinish()
             })
         }
         
-        tableView.beginRefresh()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            
+            self.tableView.beginRefresh()
+        })
+    }
+    
+    
+    
+    fileprivate func refreshFinish() {
+        
+        print("finished")
+        tableView.endRefresh()
     }
 }
 
@@ -48,10 +59,15 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let aCell = tableView.dequeueReusableCell(withIdentifier: "SJTestCell", for: indexPath) as? SJTestCell else { return UITableViewCell() }
+        let aCell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
         
-        aCell.centerLabel.text = demos[indexPath.row]
-        
+        aCell.textLabel?.text = demos[indexPath.row]
+        aCell.imageView?.image = UIImage(named: "backImg")
+
         return aCell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }
