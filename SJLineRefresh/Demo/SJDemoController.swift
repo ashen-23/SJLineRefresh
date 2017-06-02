@@ -32,12 +32,17 @@ class SJDemoViewController: UIViewController {
             })
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        startRefresh()
+    }
+    
+    
+    fileprivate func startRefresh() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             
             self.tableView.beginRefresh()
         })
     }
-    
     
     
     fileprivate func refreshFinish() {
