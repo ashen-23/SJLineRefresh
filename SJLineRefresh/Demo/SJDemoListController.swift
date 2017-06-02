@@ -34,6 +34,8 @@ class SJDemoListController: UITableViewController {
         
     }
     
+    
+    //MARK: - delegate datasource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return demos.count
@@ -42,7 +44,6 @@ class SJDemoListController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         demoType = demos[indexPath.row]
-//        demoType = SJDemoType(rawValue: indexPath.row) ?? .polygon
         
         performSegue(withIdentifier: "jump2demo", sender: self)
     }
@@ -50,6 +51,9 @@ class SJDemoListController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        let destination = segue.destination as! SJDemoViewController
+        
+        destination.demoType = demoType
         
     }
     
