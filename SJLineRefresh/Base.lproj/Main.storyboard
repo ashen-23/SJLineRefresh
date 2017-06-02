@@ -113,16 +113,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trz-nm-JyK">
-                                                    <rect key="frame" x="25" y="24" width="43" height="21"/>
+                                                    <rect key="frame" x="10" y="24" width="43" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f52-QS-RJh">
-                                                    <rect key="frame" x="101" y="19" width="180" height="31"/>
-                                                    <connections>
-                                                        <action selector="changeValue:" destination="EFc-qt-SHS" eventType="valueChanged" id="Xaw-GT-8bk"/>
-                                                    </connections>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f52-QS-RJh" customClass="SJStepSlider" customModule="SJLineRefresh" customModuleProvider="target">
+                                                    <rect key="frame" x="86" y="19" width="210" height="31"/>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eva-I7-D5z">
                                                     <rect key="frame" x="309" y="24" width="41" height="21"/>
@@ -132,12 +129,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="trz-nm-JyK" firstAttribute="leading" secondItem="duY-2V-7Cz" secondAttribute="leading" constant="25" id="2FY-DS-0nh"/>
+                                                <constraint firstItem="trz-nm-JyK" firstAttribute="leading" secondItem="duY-2V-7Cz" secondAttribute="leading" constant="10" id="2FY-DS-0nh"/>
                                                 <constraint firstAttribute="trailing" secondItem="eva-I7-D5z" secondAttribute="trailing" constant="25" id="GOP-ge-Qde"/>
                                                 <constraint firstItem="eva-I7-D5z" firstAttribute="centerY" secondItem="duY-2V-7Cz" secondAttribute="centerY" id="Txz-UB-udz"/>
                                                 <constraint firstItem="trz-nm-JyK" firstAttribute="centerY" secondItem="duY-2V-7Cz" secondAttribute="centerY" id="W3n-kM-Ztm"/>
                                                 <constraint firstItem="f52-QS-RJh" firstAttribute="centerY" secondItem="duY-2V-7Cz" secondAttribute="centerY" id="bUr-ZP-JlI"/>
-                                                <constraint firstItem="eva-I7-D5z" firstAttribute="leading" secondItem="f52-QS-RJh" secondAttribute="trailing" constant="30" id="ctD-o0-sgj"/>
+                                                <constraint firstItem="eva-I7-D5z" firstAttribute="leading" secondItem="f52-QS-RJh" secondAttribute="trailing" constant="15" id="ctD-o0-sgj"/>
                                                 <constraint firstItem="f52-QS-RJh" firstAttribute="leading" secondItem="trz-nm-JyK" secondAttribute="trailing" constant="35" id="oL5-Vw-8Zf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -163,15 +160,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-oA-F7z">
-                                                    <rect key="frame" x="268" y="35" width="35" height="30"/>
-                                                    <state key="normal" title="reset"/>
+                                                    <rect key="frame" x="246" y="35" width="46" height="30"/>
+                                                    <state key="normal" title="RESET">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="doReset:" destination="YpF-HN-Yzj" eventType="touchUpInside" id="dKo-f5-wkO"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORe-eF-vJk">
-                                                    <rect key="frame" x="318" y="35" width="32" height="30"/>
-                                                    <state key="normal" title="print"/>
+                                                    <rect key="frame" x="307" y="35" width="43" height="30"/>
+                                                    <state key="normal" title="PRINT">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="doPrint:" destination="YpF-HN-Yzj" eventType="touchUpInside" id="FAY-AI-Kwh"/>
                                                     </connections>

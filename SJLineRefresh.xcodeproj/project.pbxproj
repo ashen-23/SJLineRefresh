@@ -22,6 +22,7 @@
 		9586A7051EE16B390070587C /* SJConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A7041EE16B390070587C /* SJConfigCell.swift */; };
 		9586A7071EE16C2E0070587C /* SJConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A7061EE16C2E0070587C /* SJConfigModel.swift */; };
 		9586A7091EE170F60070587C /* SJConfigSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A7081EE170F60070587C /* SJConfigSectionCell.swift */; };
+		9586A70B1EE1775D0070587C /* SJStepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A70A1EE1775D0070587C /* SJStepSlider.swift */; };
 		958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958AAA171ED6EE3100E4F512 /* HHMedic.plist */; };
 		958AAA1C1ED6EE5400E4F512 /* SJDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */; };
 		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
@@ -45,6 +46,7 @@
 		9586A7041EE16B390070587C /* SJConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigCell.swift; sourceTree = "<group>"; };
 		9586A7061EE16C2E0070587C /* SJConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigModel.swift; sourceTree = "<group>"; };
 		9586A7081EE170F60070587C /* SJConfigSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigSectionCell.swift; sourceTree = "<group>"; };
+		9586A70A1EE1775D0070587C /* SJStepSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStepSlider.swift; sourceTree = "<group>"; };
 		958AAA171ED6EE3100E4F512 /* HHMedic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HHMedic.plist; sourceTree = "<group>"; };
 		958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoViewController.swift; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				9586A7041EE16B390070587C /* SJConfigCell.swift */,
 				9586A7061EE16C2E0070587C /* SJConfigModel.swift */,
 				9586A7081EE170F60070587C /* SJConfigSectionCell.swift */,
+				9586A70A1EE1775D0070587C /* SJStepSlider.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				9586A7091EE170F60070587C /* SJConfigSectionCell.swift in Sources */,
 				958AAA1C1ED6EE5400E4F512 /* SJDemoViewController.swift in Sources */,
 				952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */,
+				9586A70B1EE1775D0070587C /* SJStepSlider.swift in Sources */,
 				956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */,
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
 				9586A7051EE16B390070587C /* SJConfigCell.swift in Sources */,

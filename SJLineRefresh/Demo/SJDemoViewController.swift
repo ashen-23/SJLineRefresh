@@ -74,7 +74,7 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
             
             let aCell = tableView.dequeueReusableCell(withIdentifier: "config", for: indexPath) as! SJConfigCell
             
-            
+            aCell.configModel = configInfo[indexPath.row]
             
             return aCell
         }
