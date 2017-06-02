@@ -15,14 +15,13 @@ class SJDemoViewController: UIViewController {
     /// config
     var mConfig = SJRefreshConfig()
     
-    fileprivate var demos: [String]?
+    fileprivate var demos = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        demos = [String]()
         for i in 0..<20 {
-            demos?.append("this is for test \(i)")
+            demos.append("this is for test \(i)")
         }
         
         tableView.sj_header = SJRefreshView.default {
@@ -32,6 +31,8 @@ class SJDemoViewController: UIViewController {
                 self.tableView.endRefresh()
             })
         }
+        
+        tableView.beginRefresh()
     }
 }
 
@@ -42,14 +43,14 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return demos?.count ?? 0
+        return demos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let aCell = tableView.dequeueReusableCell(withIdentifier: "SJTestCell", for: indexPath) as? SJTestCell else { return UITableViewCell() }
         
-        aCell.centerLabel.text = demos?[indexPath.row]
+        aCell.centerLabel.text = demos[indexPath.row]
         
         return aCell
     }

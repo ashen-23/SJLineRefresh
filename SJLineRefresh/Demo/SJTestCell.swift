@@ -13,7 +13,6 @@ class SJTestCell: UITableViewCell {
     @IBOutlet weak var centerLabel: UILabel!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
