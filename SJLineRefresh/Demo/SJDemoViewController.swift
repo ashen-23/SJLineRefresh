@@ -12,13 +12,15 @@ class SJDemoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet var headerView: SJHeaderView!
+    
+    
     var demoType = SJDemoType.polygon
     
     /// config
     var mConfig = SJRefreshConfig()
     
     fileprivate var demos = [String]()
-    fileprivate var configInfo = SJConfigModel.default()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +37,16 @@ class SJDemoViewController: UIViewController {
             })
         }
         
+        initHeader()
+        
         startRefresh()
     }
     
+    fileprivate func initHeader() {
+    
+        headerView.frame = headerView.getHeaderFrame(width: tableView.frame.sj_width)
+        tableView.tableHeaderView = headerView
+    }
     
     fileprivate func startRefresh() {
         
@@ -53,31 +62,38 @@ class SJDemoViewController: UIViewController {
         print("finished")
         tableView.endRefresh()
     }
+    
+    @IBAction func doReset(_ sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func doPrint(_ sender: UIButton) {
+        
+        
+    }
+    
 }
 
 
 // MARK: - tableView delegate and dataSource
 extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return section == 0 ? configInfo.count : demos.count
+        return demos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.section == 0 {
-            
-            let aCell = tableView.dequeueReusableCell(withIdentifier: "config", for: indexPath) as! SJConfigCell
-            
-            aCell.configModel = configInfo[indexPath.row]
-            
-            return aCell
-        }
+//        if indexPath.section == 0 {
+//            
+//            let aCell = tableView.dequeueReusableCell(withIdentifier: "config", for: indexPath) as! SJConfigCell
+//            
+//            aCell.configModel = configInfo[indexPath.row]
+//            
+//            return aCell
+//        }
         
         let aCell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
         
@@ -88,7 +104,7 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 40 : 60
+        return 60
     }
     
     // section
@@ -96,7 +112,7 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
         
         let aView = tableView.dequeueReusableCell(withIdentifier: "section") as! SJConfigSectionCell
         
-        aView.hideBtns(hide: section != 0)
+//        aView.hideBtns(hide: section != 0)
         
         return aView
     }

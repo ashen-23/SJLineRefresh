@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9527656F1ED6F166003B14AB /* SJDemoListController.swift */; };
+		954231111EE5143300F60A55 /* SJConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954231101EE5143300F60A55 /* SJConfigView.swift */; };
+		954231151EE5144900F60A55 /* SJConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954231141EE5144900F60A55 /* SJConfigView.xib */; };
+		954231171EE5347800F60A55 /* SJHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954231161EE5347800F60A55 /* SJHeaderView.swift */; };
 		956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407D01ECEF3AE00ED9239 /* AppDelegate.swift */; };
 		956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956407D41ECEF3AE00ED9239 /* Main.storyboard */; };
 		956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956407D71ECEF3AE00ED9239 /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		9527656F1ED6F166003B14AB /* SJDemoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoListController.swift; sourceTree = "<group>"; };
+		954231101EE5143300F60A55 /* SJConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigView.swift; sourceTree = "<group>"; };
+		954231141EE5144900F60A55 /* SJConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJConfigView.xib; sourceTree = "<group>"; };
+		954231161EE5347800F60A55 /* SJHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJHeaderView.swift; sourceTree = "<group>"; };
 		956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJLineRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956407D01ECEF3AE00ED9239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956407D51ECEF3AE00ED9239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				9586A7061EE16C2E0070587C /* SJConfigModel.swift */,
 				9586A7081EE170F60070587C /* SJConfigSectionCell.swift */,
 				9586A70A1EE1775D0070587C /* SJStepSlider.swift */,
+				954231101EE5143300F60A55 /* SJConfigView.swift */,
+				954231141EE5144900F60A55 /* SJConfigView.xib */,
+				954231161EE5347800F60A55 /* SJHeaderView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
+				954231151EE5144900F60A55 /* SJConfigView.xib in Resources */,
 				95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
 			);
@@ -218,7 +228,9 @@
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,
 				956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */,
 				95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */,
+				954231111EE5143300F60A55 /* SJConfigView.swift in Sources */,
 				9586A7071EE16C2E0070587C /* SJConfigModel.swift in Sources */,
+				954231171EE5347800F60A55 /* SJHeaderView.swift in Sources */,
 				956407EF1ED01DBE00ED9239 /* SJConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

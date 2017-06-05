@@ -10,7 +10,7 @@ import UIKit
 
 class SJStepSlider: UISlider {
 
-    var step: Float = 0.1
+    @IBInspectable var step: Float = 0.1
     
     var changeBlock: ((Float) -> Void)?
     
@@ -29,21 +29,24 @@ class SJStepSlider: UISlider {
 
     fileprivate func addTarget() {
         
+        self.isContinuous = false
+
         addTarget(self, action: #selector(changeSlider), for: UIControlEvents.valueChanged)
     }
     
     func changeSlider() {
         
+        self.setValue(getRealValue(setted: self.value), animated: true)
         
         changeBlock?(self.value)
     }
     
     func getRealValue(setted: Float) -> Float {
     
-        let aCurrent = Int(setted / step)
-        let aLast = (setted - step * Float(aCurrent)) > (step / 2)
+        let multiple = Int(setted / step)
+        let moreHalf = (setted - step * Float(multiple)) > (step / 2)
         
-        return step * Float(aCurrent + (aLast ? 1 : 0))
+        return step * Float(multiple + (moreHalf ? 1 : 0))
     }
     
 }
