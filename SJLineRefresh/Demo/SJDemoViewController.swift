@@ -77,6 +77,8 @@ class SJDemoViewController: UIViewController {
         SJRefreshManager.default.resetConfig()
         
         self.tableView.sj_header?.reloadView()
+        
+        headerView.resetParas()
 
     }
     

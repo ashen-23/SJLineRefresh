@@ -16,7 +16,7 @@ class SJConfigView: UIView {
     
     var mValueChanged: (()->Void)?
     
-    fileprivate var configModel: SJConfigModel? {
+    var configModel: SJConfigModel? {
         didSet {
             updateUI()
         }
@@ -59,7 +59,7 @@ class SJConfigView: UIView {
         
     }
     
-    fileprivate func updateUI() {
+    func updateUI() {
         
         configNameLabel.text = configModel?.name
         

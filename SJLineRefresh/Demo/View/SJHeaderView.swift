@@ -26,12 +26,25 @@ class SJHeaderView: UIView {
             stackView.addSubview(aView)
             stackView.addArrangedSubview(aView)
         }
-    
     }
+    
+    func resetParas() {
+        
+        configInfo = SJConfigModel.default()
+        
+        var i = 0
+        for aView in stackView.arrangedSubviews {
+            
+            (aView as? SJConfigView)?.configModel = configInfo[i]
+            i += 1
+        }
+        
+    }
+    
     
     func getHeaderFrame(width: CGFloat) -> CGRect {
         
-        return CGRect(x: 0, y: 0, width: Int(width), height: 40 * configInfo.count)
+        return CGRect(x: 0, y: 0, width: Int(width), height: 45 * configInfo.count)
     }
 
 }
