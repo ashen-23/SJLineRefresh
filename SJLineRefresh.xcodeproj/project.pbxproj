@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9527656F1ED6F166003B14AB /* SJDemoListController.swift */; };
-		954231111EE5143300F60A55 /* SJConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954231101EE5143300F60A55 /* SJConfigView.swift */; };
-		954231151EE5144900F60A55 /* SJConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954231141EE5144900F60A55 /* SJConfigView.xib */; };
-		954231171EE5347800F60A55 /* SJHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954231161EE5347800F60A55 /* SJHeaderView.swift */; };
 		956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407D01ECEF3AE00ED9239 /* AppDelegate.swift */; };
 		956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956407D41ECEF3AE00ED9239 /* Main.storyboard */; };
 		956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956407D71ECEF3AE00ED9239 /* Assets.xcassets */; };
@@ -22,20 +19,20 @@
 		956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */; };
 		956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
 		95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */; };
-		9586A7051EE16B390070587C /* SJConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A7041EE16B390070587C /* SJConfigCell.swift */; };
-		9586A7071EE16C2E0070587C /* SJConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A7061EE16C2E0070587C /* SJConfigModel.swift */; };
-		9586A7091EE170F60070587C /* SJConfigSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A7081EE170F60070587C /* SJConfigSectionCell.swift */; };
-		9586A70B1EE1775D0070587C /* SJStepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586A70A1EE1775D0070587C /* SJStepSlider.swift */; };
 		958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958AAA171ED6EE3100E4F512 /* HHMedic.plist */; };
 		958AAA1C1ED6EE5400E4F512 /* SJDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */; };
+		958D8C521EE953480031CDA5 /* SJHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4B1EE953480031CDA5 /* SJHeaderView.swift */; };
+		958D8C531EE953480031CDA5 /* SJConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4C1EE953480031CDA5 /* SJConfigModel.swift */; };
+		958D8C541EE953480031CDA5 /* SJConfigSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4D1EE953480031CDA5 /* SJConfigSectionCell.swift */; };
+		958D8C551EE953480031CDA5 /* SJStepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4E1EE953480031CDA5 /* SJStepSlider.swift */; };
+		958D8C561EE953480031CDA5 /* SJConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4F1EE953480031CDA5 /* SJConfigView.swift */; };
+		958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958D8C501EE953480031CDA5 /* SJConfigView.xib */; };
+		958D8C581EE953480031CDA5 /* SJConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C511EE953480031CDA5 /* SJConfigCell.swift */; };
 		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9527656F1ED6F166003B14AB /* SJDemoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoListController.swift; sourceTree = "<group>"; };
-		954231101EE5143300F60A55 /* SJConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigView.swift; sourceTree = "<group>"; };
-		954231141EE5144900F60A55 /* SJConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJConfigView.xib; sourceTree = "<group>"; };
-		954231161EE5347800F60A55 /* SJHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJHeaderView.swift; sourceTree = "<group>"; };
 		956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJLineRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956407D01ECEF3AE00ED9239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956407D51ECEF3AE00ED9239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,12 +46,15 @@
 		956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJScrollViewExtention.swift; sourceTree = "<group>"; };
 		956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAnimateConfig.swift; sourceTree = "<group>"; };
 		95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SJLineRefresh.bundle; sourceTree = "<group>"; };
-		9586A7041EE16B390070587C /* SJConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigCell.swift; sourceTree = "<group>"; };
-		9586A7061EE16C2E0070587C /* SJConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigModel.swift; sourceTree = "<group>"; };
-		9586A7081EE170F60070587C /* SJConfigSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigSectionCell.swift; sourceTree = "<group>"; };
-		9586A70A1EE1775D0070587C /* SJStepSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStepSlider.swift; sourceTree = "<group>"; };
 		958AAA171ED6EE3100E4F512 /* HHMedic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HHMedic.plist; sourceTree = "<group>"; };
 		958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoViewController.swift; sourceTree = "<group>"; };
+		958D8C4B1EE953480031CDA5 /* SJHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJHeaderView.swift; sourceTree = "<group>"; };
+		958D8C4C1EE953480031CDA5 /* SJConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigModel.swift; sourceTree = "<group>"; };
+		958D8C4D1EE953480031CDA5 /* SJConfigSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigSectionCell.swift; sourceTree = "<group>"; };
+		958D8C4E1EE953480031CDA5 /* SJStepSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStepSlider.swift; sourceTree = "<group>"; };
+		958D8C4F1EE953480031CDA5 /* SJConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigView.swift; sourceTree = "<group>"; };
+		958D8C501EE953480031CDA5 /* SJConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJConfigView.xib; sourceTree = "<group>"; };
+		958D8C511EE953480031CDA5 /* SJConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigCell.swift; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,15 +128,23 @@
 			children = (
 				9527656F1ED6F166003B14AB /* SJDemoListController.swift */,
 				958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */,
-				9586A7041EE16B390070587C /* SJConfigCell.swift */,
-				9586A7061EE16C2E0070587C /* SJConfigModel.swift */,
-				9586A7081EE170F60070587C /* SJConfigSectionCell.swift */,
-				9586A70A1EE1775D0070587C /* SJStepSlider.swift */,
-				954231101EE5143300F60A55 /* SJConfigView.swift */,
-				954231141EE5144900F60A55 /* SJConfigView.xib */,
-				954231161EE5347800F60A55 /* SJHeaderView.swift */,
+				958D8C4A1EE953480031CDA5 /* View */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		958D8C4A1EE953480031CDA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				958D8C4B1EE953480031CDA5 /* SJHeaderView.swift */,
+				958D8C4C1EE953480031CDA5 /* SJConfigModel.swift */,
+				958D8C4D1EE953480031CDA5 /* SJConfigSectionCell.swift */,
+				958D8C4E1EE953480031CDA5 /* SJStepSlider.swift */,
+				958D8C4F1EE953480031CDA5 /* SJConfigView.swift */,
+				958D8C501EE953480031CDA5 /* SJConfigView.xib */,
+				958D8C511EE953480031CDA5 /* SJConfigCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +211,7 @@
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
-				954231151EE5144900F60A55 /* SJConfigView.xib in Resources */,
+				958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */,
 				95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
 			);
@@ -216,21 +224,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9586A7091EE170F60070587C /* SJConfigSectionCell.swift in Sources */,
+				958D8C581EE953480031CDA5 /* SJConfigCell.swift in Sources */,
+				958D8C541EE953480031CDA5 /* SJConfigSectionCell.swift in Sources */,
 				958AAA1C1ED6EE5400E4F512 /* SJDemoViewController.swift in Sources */,
 				952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */,
-				9586A70B1EE1775D0070587C /* SJStepSlider.swift in Sources */,
+				958D8C551EE953480031CDA5 /* SJStepSlider.swift in Sources */,
+				958D8C521EE953480031CDA5 /* SJHeaderView.swift in Sources */,
 				956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */,
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
-				9586A7051EE16B390070587C /* SJConfigCell.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,
 				956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */,
 				95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */,
-				954231111EE5143300F60A55 /* SJConfigView.swift in Sources */,
-				9586A7071EE16C2E0070587C /* SJConfigModel.swift in Sources */,
-				954231171EE5347800F60A55 /* SJHeaderView.swift in Sources */,
+				958D8C561EE953480031CDA5 /* SJConfigView.swift in Sources */,
+				958D8C531EE953480031CDA5 /* SJConfigModel.swift in Sources */,
 				956407EF1ED01DBE00ED9239 /* SJConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

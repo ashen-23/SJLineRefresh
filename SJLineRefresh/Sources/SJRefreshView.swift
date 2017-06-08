@@ -50,13 +50,24 @@ public class SJRefreshView: UIView {
         
     }
     
-    func initUI() {
+    fileprivate func initUI() {
 
         if !parsePath() {
             print("initialize failed")
             return
         }
     }
+    
+    func reloadView() {
+        
+        config = SJRefreshManager.default.defaultConfig
+        for aView in self.subviews {
+            aView.removeFromSuperview()
+        }
+        
+        initUI()
+    }
+    
     
     fileprivate func parsePath() -> Bool {
         

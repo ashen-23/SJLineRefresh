@@ -20,39 +20,38 @@ enum HHConfigType: String {
     
     func changeValue(para: Float) {
         
-        var defaultConfig = SJRefreshManager.default.defaultConfig
-        
         let paraValue = CGFloat(para)
         
         switch self {
         case .darkAlpha:
             
-            defaultConfig?.darkAlpha = paraValue
+            SJRefreshManager.default.defaultConfig.darkAlpha = paraValue
+
         
         case .lineWidth:
             
-            defaultConfig?.lineWidth = paraValue
+            SJRefreshManager.default.defaultConfig.lineWidth = paraValue
             
         case .dropHeight:
             
-            defaultConfig?.dropHeight = paraValue
+            SJRefreshManager.default.defaultConfig.dropHeight = paraValue
         
         case .startRatio:
             
-            defaultConfig?.animConfig.startRatio = paraValue
+            SJRefreshManager.default.defaultConfig.animConfig.startRatio = paraValue
             
         case .endRatio:
-            defaultConfig?.animConfig.endRatio = paraValue
+            SJRefreshManager.default.defaultConfig.animConfig.endRatio = paraValue
     
         case .randomness:
-            defaultConfig?.animConfig.randomness = Int(paraValue)
+            SJRefreshManager.default.defaultConfig.animConfig.randomness = Int(paraValue)
             
         case .disappearDuration:
             
-            defaultConfig?.animConfig.disappearDuration = Double(paraValue)
+            SJRefreshManager.default.defaultConfig.animConfig.disappearDuration = Double(paraValue)
             
         case .animateFactor:
-            defaultConfig?.animConfig.animateFactor = paraValue
+            SJRefreshManager.default.defaultConfig.animConfig.animateFactor = paraValue
             
 //        default:
 //            

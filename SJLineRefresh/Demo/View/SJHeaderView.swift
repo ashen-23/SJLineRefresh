@@ -14,19 +14,15 @@ class SJHeaderView: UIView {
  
     fileprivate var configInfo = SJConfigModel.default()
 
-    override func awakeFromNib() {
-        
-        super.awakeFromNib()
-        
-        addParaViews()
-        
-    }
+    var configChanged: (()->Void)?
     
-    fileprivate func addParaViews() {
+    func addParaViews() {
     
         for aInfo in configInfo {
             
             let aView = SJConfigView(config: aInfo)
+            aView.mValueChanged = configChanged
+            
             stackView.addSubview(aView)
             stackView.addArrangedSubview(aView)
         }

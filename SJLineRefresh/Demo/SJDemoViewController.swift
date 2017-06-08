@@ -14,7 +14,6 @@ class SJDemoViewController: UIViewController {
     
     @IBOutlet var headerView: SJHeaderView!
     
-    
     var demoType = SJDemoType.polygon
     
     /// config
@@ -29,22 +28,33 @@ class SJDemoViewController: UIViewController {
             demos.append("this is for test \(i)")
         }
         
-        tableView.sj_header = SJRefreshView.default {
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { 
-                
-                self.refreshFinish()
-            })
-        }
+        configRefresh()
         
         initHeader()
         
         startRefresh()
     }
     
+    func configRefresh() {
+        
+        tableView.sj_header = SJRefreshView.default {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                
+                self.refreshFinish()
+            })
+        }
+    }
+    
     fileprivate func initHeader() {
     
         headerView.frame = headerView.getHeaderFrame(width: tableView.frame.sj_width)
+        
+        headerView.configChanged = { [weak self] in
+            self?.tableView.sj_header?.reloadView()
+        }
+        headerView.addParaViews()
+
         tableView.tableHeaderView = headerView
     }
     

@@ -120,24 +120,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-oA-F7z">
-                                                    <rect key="frame" x="246" y="35" width="46" height="30"/>
-                                                    <state key="normal" title="RESET">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="doReset:" destination="YpF-HN-Yzj" eventType="touchUpInside" id="dKo-f5-wkO"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORe-eF-vJk">
-                                                    <rect key="frame" x="307" y="35" width="43" height="30"/>
-                                                    <state key="normal" title="PRINT">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="doPrint:" destination="YpF-HN-Yzj" eventType="touchUpInside" id="FAY-AI-Kwh"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5C-HZ-kAR">
                                                     <rect key="frame" x="20" y="40" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -148,17 +130,9 @@
                                             <constraints>
                                                 <constraint firstItem="P5C-HZ-kAR" firstAttribute="centerY" secondItem="4FX-Oe-39a" secondAttribute="centerY" id="5Ij-JH-af9"/>
                                                 <constraint firstItem="P5C-HZ-kAR" firstAttribute="leading" secondItem="4FX-Oe-39a" secondAttribute="leading" constant="20" id="Dj9-yK-2Qi"/>
-                                                <constraint firstItem="ORe-eF-vJk" firstAttribute="leading" secondItem="fdC-oA-F7z" secondAttribute="trailing" constant="15" id="Dvb-3O-T3B"/>
-                                                <constraint firstAttribute="trailing" secondItem="ORe-eF-vJk" secondAttribute="trailing" constant="25" id="RxL-WA-uUb"/>
-                                                <constraint firstItem="ORe-eF-vJk" firstAttribute="centerY" secondItem="4FX-Oe-39a" secondAttribute="centerY" id="YvB-Ml-Avd"/>
-                                                <constraint firstItem="fdC-oA-F7z" firstAttribute="centerY" secondItem="4FX-Oe-39a" secondAttribute="centerY" id="kDm-bG-6sR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <connections>
-                                            <outlet property="printBtn" destination="ORe-eF-vJk" id="uJu-m7-fDl"/>
-                                            <outlet property="resetBtn" destination="fdC-oA-F7z" id="s1i-bW-9kP"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

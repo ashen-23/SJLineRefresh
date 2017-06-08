@@ -14,6 +14,8 @@ class SJConfigView: UIView {
     @IBOutlet weak var configValueSlider: SJStepSlider!
     @IBOutlet weak var configValueLabel: UILabel!
     
+    var mValueChanged: (()->Void)?
+    
     fileprivate var configModel: SJConfigModel? {
         didSet {
             updateUI()
@@ -32,6 +34,8 @@ class SJConfigView: UIView {
             
             self?.configModel?.changeValues(value: value)
             self?.configValueLabel.text = "\(value)"
+            
+            self?.mValueChanged?()
         }
     }
     
