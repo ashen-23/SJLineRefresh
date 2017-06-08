@@ -12,7 +12,7 @@ class SJHeaderView: UIView {
 
     @IBOutlet weak var stackView: UIStackView!
  
-    fileprivate var configInfo = SJConfigModel.default()
+    var configInfo = SJConfigModel.default()
 
     var configChanged: (()->Void)?
     

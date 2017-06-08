@@ -69,18 +69,20 @@ class SJDemoViewController: UIViewController {
     
     fileprivate func refreshFinish() {
         
-        print("finished")
         tableView.endRefresh()
     }
     
     @IBAction func doReset(_ sender: UIButton) {
         
+        SJRefreshManager.default.resetConfig()
         
+        self.tableView.sj_header?.reloadView()
+
     }
     
     @IBAction func doPrint(_ sender: UIButton) {
         
-        
+        headerView.configInfo.forEach{$0.printMe()}
     }
     
 }

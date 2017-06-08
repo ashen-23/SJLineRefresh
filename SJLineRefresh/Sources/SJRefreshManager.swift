@@ -22,6 +22,11 @@ public class SJRefreshManager {
     
     init() {
         
+        resetConfig()
+    }
+    
+    public func resetConfig() {
+        
         let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
         defaultConfig = SJRefreshConfig(plist: aPath).build {
             

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum HHConfigType: String {
     case darkAlpha = "darkAlpha"
@@ -76,6 +77,12 @@ class SJConfigModel {
         self.defaultVaule = defaultVaule
     }
     
+    func printMe() -> Void {
+        
+        let aResult = (name ?? "") + ": " + "\(defaultVaule ?? 0)"
+        print(aResult)
+    }
+    
     static func `default`() -> [SJConfigModel] {
         
         var defaults = [SJConfigModel]()
@@ -114,6 +121,10 @@ class SJConfigModel {
         hasChanged = true
 
         type?.changeValue(para: value)
+        
+        
+        
     }
 
 }
+

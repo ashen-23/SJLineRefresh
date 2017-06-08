@@ -61,13 +61,23 @@ public class SJRefreshView: UIView {
     func reloadView() {
         
         config = SJRefreshManager.default.defaultConfig
+        resetUI()
+    }
+    
+    func change(config: SJRefreshConfig) {
+        
+        self.config = config
+        resetUI()
+    }
+    
+    fileprivate func resetUI() {
+        
         for aView in self.subviews {
             aView.removeFromSuperview()
         }
         
         initUI()
     }
-    
     
     fileprivate func parsePath() -> Bool {
         
