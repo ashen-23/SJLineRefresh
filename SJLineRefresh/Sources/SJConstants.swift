@@ -17,6 +17,7 @@ public enum SJRefreshState: Int {
     
     case idle = 0
     case pulling
+    case willRefresh
     case refresing
     case finish
 }

@@ -32,12 +32,12 @@ public extension UIScrollView {
     
     public func beginRefresh() {
         
-        sj_header?.startRefresh()
+        sj_header?.beginRefresh()
     }
     
     public func endRefresh() {
     
-        sj_header?.finishLoading()
+        sj_header?.endRefresh()
         
     }
     

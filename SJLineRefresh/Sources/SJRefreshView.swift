@@ -25,12 +25,17 @@ public class SJRefreshView: UIView {
     
     lazy fileprivate var originalInset = UIEdgeInsets.zero
     
-    var state = SJRefreshState.idle
+    var state = SJRefreshState.idle {
+        didSet {
+            refreshStateChange(old: oldValue)
+        }
+    }
         
     public class func `default`(refreshBlock: @escaping (()->Void)) -> SJRefreshView {
         
         return SJRefreshView(config: SJRefreshManager.default.defaultConfig, refresh: refreshBlock)
     }
+    
     
     public init(config: SJRefreshConfig, refresh: @escaping ()->Void) {
         
@@ -43,19 +48,177 @@ public class SJRefreshView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.state = .idle
     }
+
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
     }
     
-    fileprivate func initUI() {
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        if state == .willRefresh {
+            state = .refresing
+        }
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        guard let aScroll = scrollView else { return }
+        center = CGPoint(x: aScroll.bounds.size.width / 2 + config.centerOffset.x, y: -config.dropHeight / 2 + config.centerOffset.y)
+    }
+    
+    /// 刷新状态改变
+    func refreshStateChange(old: SJRefreshState) {
+        
+        if old == state { return }
+        guard let aScrollView = scrollView else { return }
+        DispatchQueue.main.async {
+            self.setNeedsLayout()
+        }
+        
+        if state == .idle {
+            if old != .refresing { return }
+            
+            // 恢复inset
+            UIView.animate(withDuration: 0.4, animations: {
+                
+                var aInset = aScrollView.contentInset
+                aInset.top += self.insetTDelta
+                aScrollView.contentInset = aInset
+                
+            }, completion: { (isSuccess) in
+                
+                self.pullingPercent = 0
+            })
+        } else if state == .refresing {
+            
+            DispatchQueue.main.async {
+                
+                UIView.animate(withDuration: 0.4, animations: {
+                    let aTop = self.originalInset.top + self.config.dropHeight
+                    var aInset = aScrollView.contentInset
+                    aInset.top = aTop
+                    aScrollView.contentInset = aInset
+                    
+                    self.scrollView?.setContentOffset(CGPoint(x: 0, y: -aTop), animated: false)
+                    
+                }, completion: { [weak self] (finish) in
+                    
+                    self?.refreshBlock?()
+                })
+            }
+            
+            loadingAnimation()
+        }
+        
+    }
+}
 
-        if !parsePath() {
-            print("initialize failed")
+
+//MARK: - outer func
+extension SJRefreshView {
+    
+    public func beginRefresh() {
+        
+        pullingPercent = 1
+        updatePathView()
+        if self.window != nil {
+            state = .refresing
+        } else {
+            
+            if state != .refresing {
+                state = .willRefresh
+                setNeedsDisplay()
+            }
+        }
+    }
+    
+    public func endRefresh() {
+        
+        DispatchQueue.main.async {
+            
+            self.state = .idle
+            self.pathViews.forEach { [weak self] (aPathView) in
+                aPathView.layer.removeAllAnimations()
+                aPathView.alpha = self?.config.darkAlpha ?? 0
+            }
+        }
+    }
+}
+
+extension SJRefreshView {
+
+    fileprivate func initUI() {
+        
+        backgroundColor = UIColor.clear
+        
+        guard let aScroll = scrollView else { return }
+        
+        let points = SJRefreshManager.default.fetchPoints(path: config.plistPath)
+        
+        guard let aStarts = points.0, let aEnds = points.1  else { return }
+        
+        if aEnds.count != aStarts.count {
+            print("para count must is equal")
             return
         }
+        
+        var width: CGFloat = 0
+        var height: CGFloat = 0
+        
+        for i in 0..<aStarts.count {
+            
+            let aStart = CGPointFromString(aStarts[i])
+            let aEnd = CGPointFromString(aEnds[i])
+            
+            width = max(width, aStart.x, aEnd.x)
+            height = max(height, aStart.y, aEnd.y)
+        }
+        
+        width += config.lineWidth
+        height += config.lineWidth
+        
+        frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        // create path view
+        for i in 0..<aStarts.count {
+            
+            var aConfig = config
+            aConfig.startPoint = CGPointFromString(aStarts[i])
+            aConfig.endPoint = CGPointFromString(aEnds[i])
+            
+            let aPathView = SJLinePathView(frame: frame, config: aConfig)
+            aPathView.tag = i
+            aPathView.backgroundColor = UIColor.clear
+            aPathView.alpha = 0
+            
+            addPathViews(view: aPathView)
+            
+            aPathView.setRadom()
+        }
+        
+        if let aBackImg = config.backImg {
+            
+            let aImgView = UIImageView(image: aBackImg)
+            aImgView.frame = CGRect(x: 0, y: 0, width: 15, height: 15)
+            
+            aImgView.center = self.center
+            insertSubview(aImgView, at: 0)
+        }
+        
+        frame = CGRect(x: 0, y: 0, width: width, height: height)
+        center = CGPoint(x: (aScroll.bounds.size.width + width) / 2, y: -config.dropHeight / 2)
+        
+        pathViews.forEach { (aView) in
+            aView.setUp()
+        }
+        
+        transform = CGAffineTransform(scaleX: config.scale, y: config.scale)
     }
     
     func reloadView() {
@@ -78,74 +241,7 @@ public class SJRefreshView: UIView {
         
         initUI()
     }
-    
-    fileprivate func parsePath() -> Bool {
-        
-        let points = SJRefreshManager.default.fetchPoints(path: config.plistPath)
-        
-        guard let aStarts = points.0, let aEnds = points.1  else { return false }
-        guard let aScrollView = scrollView else { return false }
 
-        if aEnds.count != aStarts.count {
-            
-            print("para count must is equal")
-            return false
-        }
-        
-        var width: CGFloat = 0
-        var height: CGFloat = 0
-        
-        for i in 0..<aStarts.count {
-            
-            let aStart = CGPointFromString(aStarts[i])
-            let aEnd = CGPointFromString(aEnds[i])
-            
-            width = max(width, aStart.x, aEnd.x)
-            height = max(height, aStart.y, aEnd.y)
-        }
-        
-        width += config.lineWidth
-        height += config.lineWidth
-        
-        frame = CGRect(x: 0, y: 0, width: width, height: height)
-            
-        // create path view
-        for i in 0..<aStarts.count {
-            
-            var aConfig = config
-            aConfig.startPoint = CGPointFromString(aStarts[i])
-            aConfig.endPoint = CGPointFromString(aEnds[i])
-            
-            let aPathView = SJLinePathView(frame: frame, config: aConfig)
-            aPathView.tag = i
-            aPathView.backgroundColor = UIColor.clear
-            aPathView.alpha = 0
-            
-            addPathViews(view: aPathView)
-            
-            aPathView.setRadom()
-            
-            aPathView.setUp()
-        }
-        
-        if let aBackImg = config.backImg {
-            
-            let aImgView = UIImageView(image: aBackImg)
-            aImgView.center = CGPoint(x: self.center.x + config.centerOffset.x, y: self.center.y + config.centerOffset.y)
-            insertSubview(aImgView, at: 0)
-        }
-        
-        frame = CGRect(x: 0, y: 0, width: width, height: height)
-        center = CGPoint(x: aScrollView.bounds.size.width / 2 + config.centerOffset.x, y: -config.dropHeight / 2 + config.centerOffset.y)
-    
-//        pathViews.forEach { (aView) in
-//            aView.setUp()
-//        }
-        
-        transform = CGAffineTransform(scaleX: config.scale, y: config.scale)
-
-        return true
-    }
     
     fileprivate func addPathViews(view: SJLinePathView) {
         
@@ -168,44 +264,12 @@ public class SJRefreshView: UIView {
         initUI()
     }
     
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        guard let aScroll = scrollView else { return }
-        center = CGPoint(x: aScroll.bounds.size.width / 2 + config.centerOffset.x, y: -config.dropHeight / 2 + config.centerOffset.y)
-    }
-    
 }
 
 
 // MARK: - UIView Animation
 extension SJRefreshView {
-    
-    func startRefresh() {
-        
-        guard let aScrollView = scrollView else { return }
-        state = .refresing
-        pullingPercent = 1
-        updatePathView()
-        DispatchQueue.main.async {
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                let aTop = self.originalInset.top + self.config.dropHeight
-                var aInset = aScrollView.contentInset
-                aInset.top = aTop
-                aScrollView.contentInset = aInset
-                
-                self.scrollView?.setContentOffset(CGPoint(x: 0, y: -aTop), animated: true)
-                
-            }, completion: { [weak self] (finish) in
-                
-                self?.refreshBlock?()
-            })
-        }
-        
-        loadingAnimation()
-    }
-    
+
     func updatePathView() {
         
         let aPercent = pullingPercent ?? 0
@@ -269,32 +333,6 @@ extension SJRefreshView {
         }
     }
     
-    func animateDisappear() {
-        
-        state = .finish
-    }
-    
-    func finishLoading() {
-        
-        // reset inset and offset
-        UIView.animate(withDuration: config.animConfig.disappearDuration, animations: {
-            
-            guard let aScrollView = self.scrollView else { return }
-            var aInset = aScrollView.contentInset
-            aInset.top += self.insetTDelta
-            self.scrollView?.contentInset = aInset
-            
-        }) { (finished) in
-            
-            self.state = .idle
-        }
-
-        pathViews.forEach { (aPathView) in
-            aPathView.layer.removeAllAnimations()
-            aPathView.alpha = config.darkAlpha
-        }
-    }
-    
 }
 
 
@@ -334,6 +372,10 @@ extension SJRefreshView {
             var insetTop = max(-aScrollView.contentOffset.y, originalInset.top)
             insetTop = min(config.dropHeight + originalInset.top, insetTop)
             
+            var aInset = aScrollView.contentInset
+            aInset.top = insetTop
+            scrollView?.contentInset = aInset
+            
             insetTDelta = originalInset.top - insetTop
             return
         }
@@ -362,24 +404,7 @@ extension SJRefreshView {
             }
             
         } else if state == .pulling { // no in hand & will refresh
-            state = .refresing
-            DispatchQueue.main.async {
-
-                UIView.animate(withDuration: 0.5, animations: { 
-                    let aTop = self.originalInset.top + self.config.dropHeight
-                    var aInset = aScrollView.contentInset
-                    aInset.top = aTop
-                    aScrollView.contentInset = aInset
-                    
-                    self.scrollView?.setContentOffset(CGPoint(x: 0, y: -aTop), animated: false)
-                    
-                }, completion: { [weak self] (finish) in
-                    
-                    self?.refreshBlock?()
-                })
-            }
-            
-            loadingAnimation()
+            beginRefresh()
             
         } else if pullingPercent < 1 {
             
