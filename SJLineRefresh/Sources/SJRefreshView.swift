@@ -287,6 +287,7 @@ extension SJRefreshView {
                 aPathView.alpha = config.darkAlpha
                 
             } else if aPercent == 0 {
+                
                 aPathView.setRadom()
                 
             } else {
@@ -404,6 +405,7 @@ extension SJRefreshView {
             }
             
         } else if state == .pulling { // no in hand & will refresh
+            
             beginRefresh()
             
         } else if pullingPercent < 1 {

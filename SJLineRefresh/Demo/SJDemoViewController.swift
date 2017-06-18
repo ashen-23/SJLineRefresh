@@ -100,15 +100,6 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        if indexPath.section == 0 {
-//            
-//            let aCell = tableView.dequeueReusableCell(withIdentifier: "config", for: indexPath) as! SJConfigCell
-//            
-//            aCell.configModel = configInfo[indexPath.row]
-//            
-//            return aCell
-//        }
-        
         let aCell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
         
         aCell.textLabel?.text = demos[indexPath.row]
@@ -123,12 +114,8 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     // section
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let aView = tableView.dequeueReusableCell(withIdentifier: "section") as! SJConfigSectionCell
-        
-//        aView.hideBtns(hide: section != 0)
-        
-        return aView
+                
+        return tableView.dequeueReusableCell(withIdentifier: "section")
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
