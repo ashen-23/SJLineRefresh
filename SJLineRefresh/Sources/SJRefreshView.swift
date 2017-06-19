@@ -16,13 +16,10 @@ public class SJRefreshView: UIView {
     var config = SJRefreshConfig()
     
     fileprivate var pullingPercent: CGFloat?
-    
     fileprivate var insetTDelta: CGFloat = 0
-    
     fileprivate var scrollView: UIScrollView?
     
     lazy fileprivate var pathViews = [SJLinePathView]()
-    
     lazy fileprivate var originalInset = UIEdgeInsets.zero
     
     var state = SJRefreshState.idle {
@@ -120,7 +117,7 @@ public class SJRefreshView: UIView {
 }
 
 
-//MARK: - outer func
+//MARK: - public func
 extension SJRefreshView {
     
     public func beginRefresh() {
@@ -148,6 +145,16 @@ extension SJRefreshView {
                 aPathView.alpha = self?.config.darkAlpha ?? 0
             }
         }
+    }
+    
+    public func resetUI() {
+        
+        for aView in self.subviews {
+            aView.removeFromSuperview()
+        }
+        
+        pathViews = [SJLinePathView]()
+        initUI()
     }
 }
 
@@ -219,27 +226,6 @@ extension SJRefreshView {
         }
         
         transform = CGAffineTransform(scaleX: config.scale, y: config.scale)
-    }
-    
-    func reloadView() {
-        
-        config = SJRefreshManager.default.defaultConfig
-        resetUI()
-    }
-    
-    func change(config: SJRefreshConfig) {
-        
-        self.config = config
-        resetUI()
-    }
-    
-    fileprivate func resetUI() {
-        
-        for aView in self.subviews {
-            aView.removeFromSuperview()
-        }
-        
-        initUI()
     }
 
     

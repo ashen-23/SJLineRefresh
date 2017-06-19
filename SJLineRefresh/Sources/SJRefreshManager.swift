@@ -20,21 +20,6 @@ public class SJRefreshManager {
     
     public var defaultConfig: SJRefreshConfig!
     
-    init() {
-        
-        resetConfig()
-    }
-    
-    public func resetConfig() {
-        
-        let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
-        defaultConfig = SJRefreshConfig(plist: aPath).build {
-            
-            $0.lineColor = UIColor(red:47.0/255,green:148.0/255,blue:255.0/255,alpha:1)
-            $0.backImg = getImage(name: "hh_refresh_center@3x")
-            $0.centerOffset = CGPoint(x: 0.3, y: 0.5)
-        }
-    }
 
     public func fetchPoints(path: String) -> ([String]?, [String]?) {
         
@@ -49,17 +34,5 @@ public class SJRefreshManager {
         return (startPoints, endPoints)
     }
     
-//    public func defaultConfig() -> HHRefreshConfig {
-//        
-//        let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
-//        let aConfig = HHRefreshConfig(plist: aPath).build {
-//            
-//            $0.lineColor = UIColor(red:47.0/255,green:148.0/255,blue:255.0/255,alpha:1)
-//            $0.backImg = getImage("hh_refresh_center@3x")
-//            $0.imgCenterOffset = CGPoint(x: 0.3, y: 0.5)
-//        }
-//        
-//        return aConfig
-//    }
-    
+
 }

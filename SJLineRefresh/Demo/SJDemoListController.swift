@@ -11,12 +11,13 @@ import UIKit
 
 enum SJDemoType: String {
     
+    case normal = "normal"
     case polygon = "polygon"
     
     
     static func enumAllValues() -> [SJDemoType] {
         
-        return [.polygon]
+        return [.normal, .polygon]
     }
     
 }
@@ -40,18 +41,29 @@ class SJDemoListController: UITableViewController {
         
         return demos.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath) as! SJTestCell
+        
+        cell.centerLabel.text = demos[indexPath.row].rawValue
+        
+        return cell
+        
+    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         demoType = demos[indexPath.row]
         
-        performSegue(withIdentifier: "jump2demo", sender: self)
+        let identifier = demoType == .normal ? "normal" : "jump2demo"
+        
+        performSegue(withIdentifier: identifier, sender: self)
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destination = segue.destination as! SJDemoViewController
+        let destination = segue.destination as! SJBaseDemoController
         
         destination.demoType = demoType
         

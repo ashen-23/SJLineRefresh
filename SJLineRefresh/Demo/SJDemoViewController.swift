@@ -8,25 +8,14 @@
 
 import UIKit
 
-class SJDemoViewController: UIViewController {
+class SJDemoViewController: SJBaseDemoController {
 
-    @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet var headerView: SJHeaderView!
     
-    var demoType = SJDemoType.polygon
     
-    /// config
-    var mConfig = SJRefreshConfig()
-    
-    fileprivate var demos = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for i in 0..<20 {
-            demos.append("this is for test \(i)")
-        }
         
         configRefresh()
         
@@ -36,6 +25,8 @@ class SJDemoViewController: UIViewController {
     }
     
     func configRefresh() {
+        
+        SJRefreshManager.default.deomConfig()
         
         tableView.sj_header = SJRefreshView.default {
             
@@ -70,11 +61,12 @@ class SJDemoViewController: UIViewController {
     fileprivate func refreshFinish() {
         
         tableView.endRefresh()
+        print("refresh success")
     }
     
     @IBAction func doReset(_ sender: UIButton) {
         
-        SJRefreshManager.default.resetConfig()
+        SJRefreshManager.default.deomConfig()
         
         self.tableView.sj_header?.reloadView()
         
@@ -86,7 +78,6 @@ class SJDemoViewController: UIViewController {
         
         headerView.configInfo.forEach{$0.printMe()}
     }
-    
 }
 
 
@@ -120,6 +111,6 @@ extension SJDemoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 45
+        return 55
     }
 }
