@@ -12,6 +12,8 @@ class SJNormalUseController: SJBaseDemoController {
 
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         let aPath = Bundle(for: SJNormalUseController.self).path(forResource: "HHMedic", ofType: "plist")!
         let aConfig = SJRefreshConfig(plist: aPath).build {
             
@@ -37,27 +39,3 @@ class SJNormalUseController: SJBaseDemoController {
     }
 }
 
-
-// MARK: - tableView delegate and dataSource
-extension SJNormalUseController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return demos.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let aCell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
-        
-        aCell.textLabel?.text = demos[indexPath.row]
-        aCell.imageView?.image = UIImage(named: "backImg")
-        
-        return aCell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-}
