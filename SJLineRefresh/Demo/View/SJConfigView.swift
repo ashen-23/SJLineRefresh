@@ -64,7 +64,7 @@ class SJConfigView: UIView {
         configNameLabel.text = configModel?.name
         
         configValueSlider.step = Float((configModel?.defaultVaule ?? 0) / 10)
-        configValueSlider.maximumValue = Float(configModel?.defaultVaule ?? 0) * 2
+        configValueSlider.maximumValue = Float(configModel?.defaultVaule ?? 0) * 4
         configValueLabel.text = "\(configModel?.defaultVaule ?? 0)"
         
         if configModel?.hasChanged ?? false { return }

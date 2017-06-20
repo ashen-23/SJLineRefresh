@@ -32,6 +32,9 @@
 		95D822231EF7C943007C1CBB /* SJNormalUseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822221EF7C943007C1CBB /* SJNormalUseController.swift */; };
 		95D822251EF7CA86007C1CBB /* SJBaseDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */; };
 		95D822271EF7D118007C1CBB /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822261EF7D118007C1CBB /* SJTestCell.swift */; };
+		95D822291EF8B915007C1CBB /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D822281EF8B915007C1CBB /* AKTA.plist */; };
+		95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */; };
+		95D8222D1EF8BE66007C1CBB /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D8222C1EF8BE66007C1CBB /* storehouse.plist */; };
 		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		95D822221EF7C943007C1CBB /* SJNormalUseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNormalUseController.swift; sourceTree = "<group>"; };
 		95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJBaseDemoController.swift; sourceTree = "<group>"; };
 		95D822261EF7D118007C1CBB /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTestCell.swift; sourceTree = "<group>"; };
+		95D822281EF8B915007C1CBB /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
+		95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStoreHouseController.swift; sourceTree = "<group>"; };
+		95D8222C1EF8BE66007C1CBB /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +117,8 @@
 		956407E21ECEF46800ED9239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95D8222C1EF8BE66007C1CBB /* storehouse.plist */,
+				95D822281EF8B915007C1CBB /* AKTA.plist */,
 				958AAA171ED6EE3100E4F512 /* HHMedic.plist */,
 				95799BC01ED3D58500D516B0 /* SJLineRefresh.bundle */,
 			);
@@ -136,6 +144,7 @@
 			children = (
 				9527656F1ED6F166003B14AB /* SJDemoListController.swift */,
 				95D822221EF7C943007C1CBB /* SJNormalUseController.swift */,
+				95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */,
 				958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */,
 				95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */,
 				95D822201EF7C5B7007C1CBB /* demo+extension.swift */,
@@ -223,8 +232,10 @@
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
+				95D8222D1EF8BE66007C1CBB /* storehouse.plist in Resources */,
 				958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */,
 				95799BC11ED3D58500D516B0 /* SJLineRefresh.bundle in Resources */,
+				95D822291EF8B915007C1CBB /* AKTA.plist in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +259,7 @@
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
 				95D822251EF7CA86007C1CBB /* SJBaseDemoController.swift in Sources */,
 				95D822211EF7C5B7007C1CBB /* demo+extension.swift in Sources */,
+				95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,

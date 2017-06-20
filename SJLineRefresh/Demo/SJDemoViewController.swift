@@ -56,7 +56,6 @@ class SJDemoViewController: SJBaseDemoController {
         })
     }
     
-    
     fileprivate func refreshFinish() {
         
         tableView.endRefresh()

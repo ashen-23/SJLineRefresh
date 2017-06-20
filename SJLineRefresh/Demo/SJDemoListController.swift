@@ -13,11 +13,30 @@ enum SJDemoType: String {
     
     case normal = "normal"
     case polygon = "polygon"
-    
+    case storeHouse = "storeHouse"
+    case AKTA = "AKTA"
     
     static func enumAllValues() -> [SJDemoType] {
         
-        return [.normal, .polygon]
+        return [.normal, .polygon, storeHouse, .AKTA]
+    }
+    
+    func identifier() -> String {
+        
+        switch self {
+        case .normal:
+            
+            return self.rawValue
+
+        case .AKTA: fallthrough
+        case .storeHouse:
+            
+            return "storeHouse"
+            
+        default:
+            
+            return "jump2demo"
+        }
     }
     
 }
@@ -56,9 +75,7 @@ class SJDemoListController: UITableViewController {
         
         demoType = demos[indexPath.row]
         
-        let identifier = demoType == .normal ? "normal" : "jump2demo"
-        
-        performSegue(withIdentifier: identifier, sender: self)
+        performSegue(withIdentifier: demoType.identifier(), sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

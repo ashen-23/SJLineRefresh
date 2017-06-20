@@ -112,7 +112,6 @@ public class SJRefreshView: UIView {
             
             loadingAnimation()
         }
-        
     }
 }
 
@@ -309,7 +308,7 @@ extension SJRefreshView {
             
         view.alpha = 1
         view.layer.removeAllAnimations()
-        UIView.animate(withDuration: config.animConfig.loadingIndividualTime, animations: {
+        UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
             
             view.alpha = self.config.darkAlpha
         })

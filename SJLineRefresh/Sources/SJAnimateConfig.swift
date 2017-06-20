@@ -10,13 +10,14 @@ import UIKit
 
 public struct SJAnimateConfig {
 
-    public var startRatio: CGFloat = 0.2
+    public var startRatio: CGFloat = 0.4
     
     public var endRatio: CGFloat = 1
     
     public var loadingOffset: Int = 100
     
-    public var loadingIndividualTime = 0.8
+    /// step duration
+    public var stepDuration = 0.8
     
     public var disappearDuration = 0.4
 
