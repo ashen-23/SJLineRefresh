@@ -26,6 +26,7 @@ class SJBaseDemoController: UIViewController {
             demos.append("this is for test \(i)")
         }
         
+        title = demoType.rawValue
     }
 
 }

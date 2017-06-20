@@ -35,6 +35,7 @@
 		95D822291EF8B915007C1CBB /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D822281EF8B915007C1CBB /* AKTA.plist */; };
 		95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */; };
 		95D8222D1EF8BE66007C1CBB /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D8222C1EF8BE66007C1CBB /* storehouse.plist */; };
+		95D8222F1EF8C224007C1CBB /* LOL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D8222E1EF8C224007C1CBB /* LOL.plist */; };
 		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		95D822281EF8B915007C1CBB /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
 		95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStoreHouseController.swift; sourceTree = "<group>"; };
 		95D8222C1EF8BE66007C1CBB /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
+		95D8222E1EF8C224007C1CBB /* LOL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LOL.plist; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 		956407E21ECEF46800ED9239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95D8222E1EF8C224007C1CBB /* LOL.plist */,
 				95D8222C1EF8BE66007C1CBB /* storehouse.plist */,
 				95D822281EF8B915007C1CBB /* AKTA.plist */,
 				958AAA171ED6EE3100E4F512 /* HHMedic.plist */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D8222F1EF8C224007C1CBB /* LOL.plist in Resources */,
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
