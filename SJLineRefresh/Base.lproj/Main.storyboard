@@ -57,6 +57,29 @@
                                     <outlet property="centerLabel" destination="FT8-so-SMg" id="BKx-Qa-vdc"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="section" rowHeight="65" id="9yO-F9-M3N" customClass="SJSectionCell" customModule="SJLineRefresh" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="93" width="375" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9yO-F9-M3N" id="aKO-k1-ri5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTl-jG-dFD">
+                                            <rect key="frame" x="25" y="22" width="56" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uTl-jG-dFD" firstAttribute="centerY" secondItem="aKO-k1-ri5" secondAttribute="centerY" id="Zpm-Zr-4Iw"/>
+                                        <constraint firstItem="uTl-jG-dFD" firstAttribute="leading" secondItem="aKO-k1-ri5" secondAttribute="leading" constant="25" id="sgU-ll-yR5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="uTl-jG-dFD" id="4Z6-EX-PZm"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -68,7 +91,7 @@
                     <connections>
                         <segue destination="AFg-vw-e53" kind="show" identifier="jump2demo" id="Dhw-cC-ZsH"/>
                         <segue destination="Ncu-Zp-XtM" kind="show" identifier="normal" id="jbE-c9-cu7"/>
-                        <segue destination="GMG-ix-Spl" kind="show" identifier="storeHouse" id="eUH-eZ-Rhj"/>
+                        <segue destination="GMG-ix-Spl" kind="show" identifier="demo" id="eUH-eZ-Rhj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEE-ND-8TI" userLabel="First Responder" sceneMemberID="firstResponder"/>

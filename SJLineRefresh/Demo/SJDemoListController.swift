@@ -11,29 +11,32 @@ import UIKit
 
 enum SJDemoType: String {
     
-    case normal = "normal"
     case polygon = "polygon"
-    case storeHouse = "storeHouse"
+    case storehouse = "storehouse"
     case AKTA = "AKTA"
+    case LOL = "LOL"
+    case debug = "debug"
     
     static func enumAllValues() -> [SJDemoType] {
         
-        return [.normal, .polygon, storeHouse, .AKTA]
+        return [.polygon, storehouse, .AKTA, .LOL]
     }
     
     func identifier() -> String {
         
         switch self {
-        case .normal:
-            
-            return self.rawValue
 
+        case .polygon:
+            
+            return "normal"
+            
         case .AKTA: fallthrough
-        case .storeHouse:
+        case .storehouse: fallthrough
+        case .LOL:
             
-            return "storeHouse"
+            return "demo"
             
-        default:
+        case .debug:
             
             return "jump2demo"
         }
@@ -54,11 +57,14 @@ class SJDemoListController: UITableViewController {
         
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
     //MARK: - delegate datasource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return demos.count
+        return section == 0 ? demos.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,7 +81,9 @@ class SJDemoListController: UITableViewController {
         
         demoType = demos[indexPath.row]
         
-        performSegue(withIdentifier: demoType.identifier(), sender: self)
+        let identifier = indexPath.section == 1 ? "jump2demo" : demoType.identifier()
+        
+        performSegue(withIdentifier: identifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,7 +91,6 @@ class SJDemoListController: UITableViewController {
         let destination = segue.destination as! SJBaseDemoController
         
         destination.demoType = demoType
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -91,4 +98,17 @@ class SJDemoListController: UITableViewController {
         return 75
     }
 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let aView = tableView.dequeueReusableCell(withIdentifier: "section") as! SJSectionCell
+        
+        aView.titleLabel.text = section == 0 ? "demo mode" : "debug mode"
+        
+        return aView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 45
+    }
 }

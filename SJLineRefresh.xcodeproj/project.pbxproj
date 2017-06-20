@@ -28,10 +28,12 @@
 		958D8C561EE953480031CDA5 /* SJConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4F1EE953480031CDA5 /* SJConfigView.swift */; };
 		958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958D8C501EE953480031CDA5 /* SJConfigView.xib */; };
 		958D8C581EE953480031CDA5 /* SJConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C511EE953480031CDA5 /* SJConfigCell.swift */; };
+		9599390B1EF93420004784A2 /* SJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959939091EF93420004784A2 /* SJTableViewCell.xib */; };
+		9599390D1EF934D6004784A2 /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599390C1EF934D6004784A2 /* SJTestCell.swift */; };
+		959939101EF937D0004784A2 /* SJSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599390F1EF937D0004784A2 /* SJSectionCell.swift */; };
 		95D822211EF7C5B7007C1CBB /* demo+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822201EF7C5B7007C1CBB /* demo+extension.swift */; };
 		95D822231EF7C943007C1CBB /* SJNormalUseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822221EF7C943007C1CBB /* SJNormalUseController.swift */; };
 		95D822251EF7CA86007C1CBB /* SJBaseDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */; };
-		95D822271EF7D118007C1CBB /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822261EF7D118007C1CBB /* SJTestCell.swift */; };
 		95D822291EF8B915007C1CBB /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D822281EF8B915007C1CBB /* AKTA.plist */; };
 		95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */; };
 		95D8222D1EF8BE66007C1CBB /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D8222C1EF8BE66007C1CBB /* storehouse.plist */; };
@@ -62,11 +64,13 @@
 		958D8C4E1EE953480031CDA5 /* SJStepSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStepSlider.swift; sourceTree = "<group>"; };
 		958D8C4F1EE953480031CDA5 /* SJConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigView.swift; sourceTree = "<group>"; };
 		958D8C501EE953480031CDA5 /* SJConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJConfigView.xib; sourceTree = "<group>"; };
-		958D8C511EE953480031CDA5 /* SJConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigCell.swift; sourceTree = "<group>"; };
+		958D8C511EE953480031CDA5 /* SJConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJConfigCell.swift; path = ../View/SJConfigCell.swift; sourceTree = "<group>"; };
+		959939091EF93420004784A2 /* SJTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJTableViewCell.xib; path = ../View/SJTableViewCell.xib; sourceTree = "<group>"; };
+		9599390C1EF934D6004784A2 /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJTestCell.swift; path = ../View/SJTestCell.swift; sourceTree = "<group>"; };
+		9599390F1EF937D0004784A2 /* SJSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSectionCell.swift; sourceTree = "<group>"; };
 		95D822201EF7C5B7007C1CBB /* demo+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "demo+extension.swift"; sourceTree = "<group>"; };
 		95D822221EF7C943007C1CBB /* SJNormalUseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNormalUseController.swift; sourceTree = "<group>"; };
 		95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJBaseDemoController.swift; sourceTree = "<group>"; };
-		95D822261EF7D118007C1CBB /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTestCell.swift; sourceTree = "<group>"; };
 		95D822281EF8B915007C1CBB /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
 		95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStoreHouseController.swift; sourceTree = "<group>"; };
 		95D8222C1EF8BE66007C1CBB /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */,
 				95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */,
 				95D822201EF7C5B7007C1CBB /* demo+extension.swift */,
+				9599390E1EF937BF004784A2 /* Cell */,
 				958D8C4A1EE953480031CDA5 /* View */,
 			);
 			path = Demo;
@@ -165,10 +170,19 @@
 				958D8C4E1EE953480031CDA5 /* SJStepSlider.swift */,
 				958D8C4F1EE953480031CDA5 /* SJConfigView.swift */,
 				958D8C501EE953480031CDA5 /* SJConfigView.xib */,
-				958D8C511EE953480031CDA5 /* SJConfigCell.swift */,
-				95D822261EF7D118007C1CBB /* SJTestCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9599390E1EF937BF004784A2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9599390C1EF934D6004784A2 /* SJTestCell.swift */,
+				958D8C511EE953480031CDA5 /* SJConfigCell.swift */,
+				959939091EF93420004784A2 /* SJTableViewCell.xib */,
+				9599390F1EF937D0004784A2 /* SJSectionCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 			files = (
 				95D8222F1EF8C224007C1CBB /* LOL.plist in Resources */,
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
+				9599390B1EF93420004784A2 /* SJTableViewCell.xib in Resources */,
 				958AAA181ED6EE3100E4F512 /* HHMedic.plist in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
 				95D8222D1EF8BE66007C1CBB /* storehouse.plist in Resources */,
@@ -251,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D822271EF7D118007C1CBB /* SJTestCell.swift in Sources */,
 				958D8C581EE953480031CDA5 /* SJConfigCell.swift in Sources */,
 				958D8C541EE953480031CDA5 /* SJConfigSectionCell.swift in Sources */,
 				958AAA1C1ED6EE5400E4F512 /* SJDemoViewController.swift in Sources */,
@@ -266,7 +280,9 @@
 				95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
+				959939101EF937D0004784A2 /* SJSectionCell.swift in Sources */,
 				956407ED1ECEFB5600ED9239 /* SJRefreshConfig.swift in Sources */,
+				9599390D1EF934D6004784A2 /* SJTestCell.swift in Sources */,
 				956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */,
 				95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */,
 				958D8C561EE953480031CDA5 /* SJConfigView.swift in Sources */,

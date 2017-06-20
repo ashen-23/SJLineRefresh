@@ -26,10 +26,8 @@ class SJStoreHouseController: SJBaseDemoController {
     }
     
     func setupRefresh() {
-    
-        let plist = demoType == .storeHouse ? "storehouse" : "AKTA"
         
-        let aPath = Bundle(for: SJNormalUseController.self).path(forResource: plist, ofType: "plist")!
+        let aPath = Bundle(for: SJNormalUseController.self).path(forResource: demoType.rawValue, ofType: "plist")!
         let aConfig = SJRefreshConfig(plist: aPath).build {
             
             $0.lineColor = UIColor.white

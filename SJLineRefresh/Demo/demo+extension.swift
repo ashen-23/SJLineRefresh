@@ -21,9 +21,7 @@ extension SJRefreshView {
         self.config = config
         resetUI()
     }
-    
 }
-
 
 extension SJRefreshManager {
     

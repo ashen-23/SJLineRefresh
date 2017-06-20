@@ -12,7 +12,6 @@ class SJDemoViewController: SJBaseDemoController {
 
     @IBOutlet var headerView: SJHeaderView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

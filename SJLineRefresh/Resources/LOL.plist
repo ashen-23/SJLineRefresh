@@ -4,37 +4,37 @@
 <dict>
 	<key>startPoints</key>
 	<array>
-		<string>{0,35}</string>
-		<string>{12,42}</string>
-		<string>{24,35}</string>
-		<string>{0,35}</string>
-		<string>{0,21}</string>
-		<string>{12,28}</string>
-		<string>{24,35}</string>
-		<string>{24,21}</string>
-		<string>{0,21}</string>
-		<string>{0,21}</string>
-		<string>{12,14}</string>
-		<string>{12,14}</string>
-		<string>{24,7}</string>
-		<string>{0,7}</string>
+		<string>{1,8}</string>
+		<string>{1,29}</string>
+		<string>{1,50}</string>
+        
+		<string>{52,7}</string>
+		<string>{52,27}</string>
+		<string>{52,51}</string>
+		<string>{75,51}</string>
+		<string>{75,27}</string>
+		<string>{75,7}</string>
+        
+		<string>{112,9}</string>
+		<string>{112,30}</string>
+		<string>{112,51}</string>
 	</array>
 	<key>endPoints</key>
 	<array>
-		<string>{12,42}</string>
-		<string>{24,35}</string>
-		<string>{12,28}</string>
-		<string>{12,28}</string>
-		<string>{12,28}</string>
-		<string>{24,21}</string>
-		<string>{24,21}</string>
-		<string>{12,14}</string>
-		<string>{12,14}</string>
-		<string>{0,7}</string>
-		<string>{0,7}</string>
-		<string>{24,7}</string>
-		<string>{12,0}</string>
-		<string>{12,0}</string>
+        <string>{1,29}</string>
+        <string>{1,50}</string>
+        <string>{26,50}</string>
+        
+        <string>{52,27}</string>
+        <string>{52,51}</string>
+        <string>{75,51}</string>
+        <string>{75,27}</string>
+        <string>{75,7}</string>
+        <string>{52,7}</string>
+        
+        <string>{112,30}</string>
+        <string>{112,51}</string>
+        <string>{137,51}</string>
 	</array>
 </dict>
 </plist>
