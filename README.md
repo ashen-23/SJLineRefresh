@@ -1,15 +1,16 @@
 # SJLineRefresh
 
 ***
-![pology](http://upload-images.jianshu.io/upload_images/988961-5f6cc8c69fead46f.gif?imageMogr2/auto-orient/strip)
+
+![pology](./polygon.gif)
 ![LOL](http://upload-images.jianshu.io/upload_images/988961-5fca72fd4bc6b521.gif?imageMogr2/auto-orient/strip)
 ![AKTA](http://upload-images.jianshu.io/upload_images/988961-b59f46fdace2c742.gif?imageMogr2/auto-orient/strip)
-- #what's this?#
-
+- **what's this?**
+***
 A easy customizable shape pull-to-refresh control
 
-***
-- #how to use#
+
+- how to use
 ***
 ```
 let aPath = Bundle.main.path(forResource: "HHMedic", ofType: "plist")!
@@ -21,9 +22,9 @@ tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
 ```
 
 
-- #Installation#
+- Installation
 ***
-#CocoaPods#
+**CocoaPods**
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
 ```
@@ -44,7 +45,8 @@ Then, run the following command:
 ```
 $ pod install
 ```
-#Carthage
+
+**Carthage**
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
