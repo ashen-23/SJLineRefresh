@@ -20,7 +20,6 @@ public class SJRefreshManager {
     
     public var defaultConfig: SJRefreshConfig!
     
-
     public func fetchPoints(path: String) -> ([String]?, [String]?) {
         
         if plistPath != path {

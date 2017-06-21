@@ -5,10 +5,11 @@ Pod::Spec.new do |s|
 
   s.name         = "SJLineRefresh"
   s.version      = "1.0.0"
-  s.summary      = "A easy customizable shape pull-to-refresh control."
+  s.summary      = "A easy customizable shape pull-to-refresh view in UIScrolView."
 
 
   s.description  = <<-DESC
+                    A pull-to-refresh control that you could use your own share easily.
                    DESC
 
   s.homepage     = "https://github.com/515783034/SJLIineRefresh"
@@ -26,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "SJLineRefresh/Sources/*.swift"
 
-  # s.resources = "Resources/*.png"
+  s.resources = "SJLineRefresh/Resources/*.*"
 
   s.requires_arc = true
 
