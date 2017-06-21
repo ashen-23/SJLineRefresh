@@ -24,6 +24,7 @@ tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
 - #Installation#
 ***
 #CocoaPods#
+
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
 ```
 $ gem install cocoapods
@@ -51,10 +52,9 @@ You can install Carthage with [Homebrew](http://brew.sh/) using the following 
 $ brew update
 $ brew install carthage
 ```
-To integrate Alamofire into your Xcode project using Carthage, specify it in your Cartfile
-:
+To integrate Alamofire into your Xcode project using Carthage, specify it in your Cartfile :
 ```
-github "Alamofire/Alamofire" ~> 4.4
+github "515783034/SJLIineRefresh" ~> 4.4
 ```
 Run carthage update to build the framework and drag the built SJLineRefresh.framework into your Xcode project.
 
