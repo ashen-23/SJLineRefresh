@@ -14,14 +14,15 @@ class SJNormalUseController: SJBaseDemoController {
         
         super.viewDidLoad()
         
-        let aPath = Bundle(for: SJNormalUseController.self).path(forResource: "HHMedic", ofType: "plist")!
+        
+        let aPath = Bundle.main.path(forResource: "HHMedic", ofType: "plist")!
         let aConfig = SJRefreshConfig(plist: aPath).build {
             
             $0.lineColor = UIColor(red:47.0/255,green:148.0/255,blue:255.0/255,alpha:1)
             $0.backImg = getImage(name: "hh_refresh_center@3x")
             $0.centerOffset = CGPoint(x: 0.3, y: 0.5)
         }
-        
+
         tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
