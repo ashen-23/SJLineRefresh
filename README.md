@@ -1,15 +1,13 @@
 # SJLineRefresh
-
 ***
+- **what's this?**
+***
+A easy customizable shape pull-to-refresh control
 
 ![pology](./polygon.gif)
 ![LOL](./LOL.gif)
 ![AKTA](./AKTA.gif)
 ![debug](./debug.gif)
-- **what's this?**
-***
-A easy customizable shape pull-to-refresh control
-
 
 - **how to use**
 ***
@@ -17,29 +15,28 @@ A easy customizable shape pull-to-refresh control
 let aPath = Bundle.main.path(forResource: "HHMedic", ofType: "plist")!
 let aConfig = SJRefreshConfig(plist: aPath)
 tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
-  //  Network connect
+  // do your refresh
 }
 
 ```
 
 - **how to create shape**
 ***
-##only support line shape now.##
-![PaintCode](https://www.paintcodeapp.com/images/paintcode3-logo.svg)[PaintCode](https://www.paintcodeapp.com) is a dependency manager for Cocoa projects.
+only support line shape now.
+[PaintCode](https://www.paintcodeapp.com) is a app that can turn drawings into Objective-C or swift code.
 ![paintCode](./paintCode.png)
 
 ```
-drawing lines whatever you want
-paste the points that PaintCode genarated into your own plist(startPoints, endPoint)
-the refreshView's maxWidth is equal to the max x of points in step 2. so does the maxHeight
-
+- drawing lines whatever you want;
+- paste the points that PaintCode genarated into your own plist(startPoints, endPoint);
+- the refreshView's maxWidth is equal to the max x of points in step 2. so does the maxHeight.
 ```
 
 - **Installation**
 ***
 **CocoaPods**
 
-[CocoaPods](http://cocoapods.org/) is a app that can turn drawings into Objective-C or swift code.
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects.
 ```
 $ gem install cocoapods
 ```
@@ -51,7 +48,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
 target '<Your Target Name>' do
-   pod 'SJLineRefresh', '~> 4.4'
+   pod 'SJLineRefresh', '~> 1.0.1'
 end
 ```
 Then, run the following command:
