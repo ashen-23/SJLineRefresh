@@ -4,10 +4,10 @@
 ***
 A easy customizable shape pull-to-refresh control
 
-![pology](./polygon.gif)
-![LOL](./LOL.gif)
-![AKTA](./AKTA.gif)
-![debug](./debug.gif)
+![pology](./images/polygon.gif)
+![LOL](./images/LOL.gif)
+![AKTA](./images/AKTA.gif)
+![debug](./images/debug.gif)
 
 - **how to use**
 ***
@@ -23,8 +23,9 @@ tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
 - **how to create shape**
 ***
 only support line shape now.
+
 [PaintCode](https://www.paintcodeapp.com) is a app that can turn drawings into Objective-C or swift code.
-![paintCode](./paintCode.png)
+![paintCode](./images/paintCode.png)
 
 ```
 - drawing lines whatever you want;
