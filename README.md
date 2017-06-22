@@ -66,7 +66,7 @@ $ brew install carthage
 ```
 To integrate Alamofire into your Xcode project using Carthage, specify it in your Cartfile :
 ```
-github "515783034/SJLIineRefresh" ~> 4.4
+github "515783034/SJLIineRefresh" ~> 1.0.1
 ```
 Run carthage update to build the framework and drag the built SJLineRefresh.framework into your Xcode project.
 
