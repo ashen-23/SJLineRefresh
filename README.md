@@ -11,7 +11,7 @@
 A easy customizable shape pull-to-refresh control
 
 
-- how to use
+- **how to use**
 ***
 ```
 let aPath = Bundle.main.path(forResource: "HHMedic", ofType: "plist")!
@@ -22,12 +22,24 @@ tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
 
 ```
 
+- **how to create shape**
+***
+##only support line shape now.##
+![PaintCode](https://www.paintcodeapp.com/images/paintcode3-logo.svg)[PaintCode](https://www.paintcodeapp.com) is a dependency manager for Cocoa projects.
+![paintCode](./paintCode.png)
+
+```
+drawing lines whatever you want
+paste the points that PaintCode genarated into your own plist(startPoints, endPoint)
+the refreshView's maxWidth is equal to the max x of points in step 2. so does the maxHeight
+
+```
 
 - **Installation**
 ***
 **CocoaPods**
 
-[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
+[CocoaPods](http://cocoapods.org/) is a app that can turn drawings into Objective-C or swift code.
 ```
 $ gem install cocoapods
 ```
