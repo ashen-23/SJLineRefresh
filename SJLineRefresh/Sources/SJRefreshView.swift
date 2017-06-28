@@ -293,32 +293,110 @@ extension SJRefreshView {
         
         for i in 0..<pathViews.count {
             
-            let aTime = DispatchTime.now()  + DispatchTimeInterval.milliseconds(i * config.animConfig.loadingOffset)
+            let aTime = DispatchTime.now()  + DispatchTimeInterval.milliseconds(i * config.animConfig.stepLength)
             DispatchQueue.main.asyncAfter(deadline: aTime) {
                 
-                self.animateView(view: self.pathViews[i])
+                self.flashPath(view: self.pathViews[i])
             }
         }
         
     }
     
-    func animateView(view: SJLinePathView) {
+    /// make line path flashed
+    func flashPath(view: SJLinePathView) {
         
         if state != .refresing { return }
-            
-        view.alpha = 1
+        
         view.layer.removeAllAnimations()
-        UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
-            
-            view.alpha = self.config.darkAlpha
-        })
+        
+        stepAnimation(view: view)
         
         if (view.tag == pathViews.count - 1) && state == .refresing {
             
-            loadingAnimation()
+            cycleAnimation()
+        }
+
+    }
+    
+    func stepAnimation(view: SJLinePathView) {
+        
+        switch config.animConfig.style {
+        case .stay:
+            
+            stayStyle(view)
+            
+        case .normal:
+            
+            normalStyle(view)
+            
+        default:
+            
+            break
+            
         }
     }
     
+    func cycleAnimation() {
+        
+        switch config.animConfig.style {
+        case .stay:
+            
+            statyCycle()
+           
+        case .normal:
+            
+            normalCycle()
+        
+        default:
+            
+            break
+        }
+        
+    }
+    
+}
+
+
+// MARK: - style
+extension SJRefreshView {
+
+    func stayStyle(_ view: SJLinePathView) {
+        
+        view.alpha = config.darkAlpha
+        UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
+            
+            view.alpha = 1
+            
+        })
+    }
+    
+    func normalStyle(_ view: SJLinePathView) {
+        
+        view.alpha = 1
+        UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
+            
+            view.alpha = self.config.darkAlpha
+            
+        })
+    }
+    
+    func statyCycle() {
+        
+        UIView.animate(withDuration: 0.3, animations: { 
+            
+            self.pathViews.forEach{$0.alpha = self.config.darkAlpha}
+            
+        }) { (finish) in
+            
+            self.loadingAnimation()
+        }
+        
+    }
+    
+    func normalCycle() {
+        
+        loadingAnimation()
+    }
 }
 
 

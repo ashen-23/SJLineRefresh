@@ -8,6 +8,12 @@
 
 import UIKit
 
+public enum SJLoadStyle: Int {
+
+    case step
+    case collect
+}
+
 /// refresh parameters
 public struct SJRefreshConfig {
 

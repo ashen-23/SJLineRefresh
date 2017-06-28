@@ -1,5 +1,5 @@
 # SJLineRefresh
-***
+
 - **what's this?**
 ***
 A easy customizable shape pull-to-refresh control

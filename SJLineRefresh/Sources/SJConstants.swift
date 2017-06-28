@@ -23,6 +23,16 @@ public enum SJRefreshState: Int {
 }
 
 
+public enum SJAnimateStyle: Int {
+    
+    case reverse
+    case normal
+    case step
+    case stay
+    case all
+}
+
+
 // 获取当前组件的bundle
 func getCurrentBundle() -> Bundle
 {

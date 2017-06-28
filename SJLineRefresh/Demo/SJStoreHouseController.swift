@@ -39,7 +39,7 @@ class SJStoreHouseController: SJBaseDemoController {
         
         tableView.sj_header = SJRefreshView(config: aConfig, refresh: { [weak self] in
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 
                 self?.tableView.endRefresh()
             })
