@@ -22,6 +22,9 @@ public class SJRefreshView: UIView {
     lazy fileprivate var pathViews = [SJLinePathView]()
     lazy fileprivate var originalInset = UIEdgeInsets.zero
     
+    fileprivate var timer: Timer?
+    fileprivate var currentIndex: Int = 0
+    
     var state = SJRefreshState.idle {
         didSet {
             refreshStateChange(old: oldValue)
@@ -91,6 +94,7 @@ public class SJRefreshView: UIView {
             }, completion: { (isSuccess) in
                 
                 self.pullingPercent = 0
+                self.cancelAnime()
             })
         } else if state == .refresing {
             
@@ -110,7 +114,7 @@ public class SJRefreshView: UIView {
                 })
             }
             
-            loadingAnimation()
+            startAniam()
         }
     }
 }
@@ -258,13 +262,15 @@ extension SJRefreshView {
     func updatePathView() {
         
         let aPercent = pullingPercent ?? 0
-                
+    
+        let factor = config.animConfig.style.isStep() ? 0 : config.animConfig.animateFactor
+        
         for i in 0..<pathViews.count {
             
             let aPathView = pathViews[i]
             
-            let startPadding = (1 - config.animConfig.animateFactor) / CGFloat(pathViews.count) * CGFloat(i)
-            let endPadding = 1 - config.animConfig.animateFactor - startPadding
+            let startPadding = (1 - factor) / CGFloat(pathViews.count) * CGFloat(i)
+            let endPadding = 1 - factor - startPadding
             
             if aPercent == 1 || aPercent >= 1 - endPadding {
                 
@@ -277,7 +283,7 @@ extension SJRefreshView {
                 
             } else {
                 
-                let aProgress = aPercent <= startPadding ? 0 : min(1, (aPercent - startPadding) / config.animConfig.animateFactor)
+                let aProgress = aPercent <= startPadding ? 0 : min(1, (aPercent - startPadding) / factor)
                 aPathView.transform = CGAffineTransform(translationX: aPathView.translationX * (1 - aProgress), y: config.dropHeight * (1 - aProgress))
                 
                 aPathView.transform = aPathView.transform.rotated(by: CGFloat(Double.pi) * aProgress)
@@ -287,26 +293,20 @@ extension SJRefreshView {
             }
         }
     }
-    
-    /// start loading animation
-    func loadingAnimation() {
-        
-        for i in 0..<pathViews.count {
-            
-            let aTime = DispatchTime.now()  + DispatchTimeInterval.milliseconds(i * config.animConfig.stepLength)
-            DispatchQueue.main.asyncAfter(deadline: aTime) {
-                
-                self.flashPath(view: self.pathViews[i])
-            }
-        }
-        
-    }
-    
+
     /// make line path flashed
-    func flashPath(view: SJLinePathView) {
+    func flashPath() {
         
         if state != .refresing { return }
         
+        if currentIndex >= pathViews.count {
+            currentIndex = 0
+        }
+        
+        let view = pathViews[currentIndex]
+        
+        currentIndex += 1
+
         view.layer.removeAllAnimations()
         
         stepAnimation(view: view)
@@ -325,7 +325,8 @@ extension SJRefreshView {
             
             stayStyle(view)
             
-        case .normal:
+        case .normal: fallthrough
+        case .step:
             
             normalStyle(view)
             
@@ -343,7 +344,8 @@ extension SJRefreshView {
             
             statyCycle()
            
-        case .normal:
+        case .normal: fallthrough
+        case .step:
             
             normalCycle()
         
@@ -356,15 +358,16 @@ extension SJRefreshView {
     
 }
 
-
 // MARK: - style
 extension SJRefreshView {
 
     func stayStyle(_ view: SJLinePathView) {
         
+        print("开始变成1---")
         view.alpha = config.darkAlpha
         UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
             
+            print("1完成----")
             view.alpha = 1
             
         })
@@ -384,21 +387,38 @@ extension SJRefreshView {
         
         UIView.animate(withDuration: 0.3, animations: { 
             
+            print("所有开始恢复默认")
             self.pathViews.forEach{$0.alpha = self.config.darkAlpha}
             
         }) { (finish) in
             
-            self.loadingAnimation()
+            self.startAniam()
         }
         
     }
     
     func normalCycle() {
         
-        loadingAnimation()
+        startAniam()
     }
 }
 
+
+// MARK: - timer
+extension SJRefreshView {
+    
+    func startAniam() {
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: config.animConfig.stepLength, target: self, selector: #selector(flashPath), userInfo: nil, repeats: true)
+    }
+    
+    func cancelAnime() {
+    
+        timer?.invalidate()
+        timer = nil
+    }
+}
 
 // MARK: - observer
 extension SJRefreshView {

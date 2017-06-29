@@ -30,6 +30,11 @@ public enum SJAnimateStyle: Int {
     case step
     case stay
     case all
+    
+    func isStep() -> Bool {
+        
+        return self == .step
+    }
 }
 
 

@@ -14,10 +14,10 @@ public struct SJAnimateConfig {
     
     public var endRatio: CGFloat = 1
     
-    // ms
-    public var stepLength: Int = 100
+    // second
+    public var stepLength: TimeInterval = 0.1
     
-    public var style = SJAnimateStyle.stay
+    public var style = SJAnimateStyle.step
     
     /// step duration  0.8
     public var stepDuration: Double = 0.8
