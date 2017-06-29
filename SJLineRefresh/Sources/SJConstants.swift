@@ -23,13 +23,18 @@ public enum SJRefreshState: Int {
 }
 
 
+/// animation style
+///
+/// - reverse: reverse loading direction
+/// - normal: default
+/// - step: add line step by step
+/// - stay: flash will not disappear
 public enum SJAnimateStyle: Int {
     
     case reverse
     case normal
     case step
     case stay
-    case all
     
     func isStep() -> Bool {
         

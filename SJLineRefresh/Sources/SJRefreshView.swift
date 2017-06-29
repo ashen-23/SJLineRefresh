@@ -25,6 +25,7 @@ public class SJRefreshView: UIView {
     fileprivate var timer: Timer?
     fileprivate var currentIndex: Int = 0
     
+    
     var state = SJRefreshState.idle {
         didSet {
             refreshStateChange(old: oldValue)
@@ -85,7 +86,7 @@ public class SJRefreshView: UIView {
             if old != .refresing { return }
             
             // 恢复inset
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: config.animConfig.animeDuration, animations: {
                 
                 var aInset = aScrollView.contentInset
                 aInset.top += self.insetTDelta
@@ -94,13 +95,16 @@ public class SJRefreshView: UIView {
             }, completion: { (isSuccess) in
                 
                 self.pullingPercent = 0
-                self.cancelAnime()
+                self.endTimer()
             })
+            
+            self.startFinishAnime()
+            
         } else if state == .refresing {
             
             DispatchQueue.main.async {
                 
-                UIView.animate(withDuration: 0.4, animations: {
+                UIView.animate(withDuration: self.config.animConfig.animeDuration, animations: {
                     let aTop = self.originalInset.top + self.config.dropHeight
                     var aInset = aScrollView.contentInset
                     aInset.top = aTop
@@ -147,6 +151,8 @@ extension SJRefreshView {
                 aPathView.layer.removeAllAnimations()
                 aPathView.alpha = self?.config.darkAlpha ?? 0
             }
+            
+            
         }
     }
     
@@ -262,7 +268,7 @@ extension SJRefreshView {
     func updatePathView() {
         
         let aPercent = pullingPercent ?? 0
-    
+        
         let factor = config.animConfig.style.isStep() ? 0 : config.animConfig.animateFactor
         
         for i in 0..<pathViews.count {
@@ -303,7 +309,8 @@ extension SJRefreshView {
             currentIndex = 0
         }
         
-        let view = pathViews[currentIndex]
+        let aIndex = config.animConfig.style == .reverse ? (pathViews.count - 1 - currentIndex) : currentIndex
+        let view = pathViews[aIndex]
         
         currentIndex += 1
 
@@ -311,11 +318,17 @@ extension SJRefreshView {
         
         stepAnimation(view: view)
         
-        if (view.tag == pathViews.count - 1) && state == .refresing {
+        if (aIndex == pathViews.count - 1) && state == .refresing {
             
             cycleAnimation()
         }
 
+    }
+    
+    func finishAnime() {
+        
+        pullingPercent = (pullingPercent ?? 1) - CGFloat(1 / 60 / config.animConfig.animeDuration)
+        updatePathView()
     }
     
     func stepAnimation(view: SJLinePathView) {
@@ -326,14 +339,11 @@ extension SJRefreshView {
             stayStyle(view)
             
         case .normal: fallthrough
-        case .step:
+        case .step: fallthrough
+        case .reverse:
             
             normalStyle(view)
-            
-        default:
-            
-            break
-            
+
         }
     }
     
@@ -345,13 +355,11 @@ extension SJRefreshView {
             statyCycle()
            
         case .normal: fallthrough
-        case .step:
+        case .step: fallthrough
+        case .reverse:
             
             normalCycle()
-        
-        default:
-            
-            break
+
         }
         
     }
@@ -363,11 +371,9 @@ extension SJRefreshView {
 
     func stayStyle(_ view: SJLinePathView) {
         
-        print("开始变成1---")
         view.alpha = config.darkAlpha
         UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
             
-            print("1完成----")
             view.alpha = 1
             
         })
@@ -379,7 +385,6 @@ extension SJRefreshView {
         UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
             
             view.alpha = self.config.darkAlpha
-            
         })
     }
     
@@ -387,7 +392,6 @@ extension SJRefreshView {
         
         UIView.animate(withDuration: 0.3, animations: { 
             
-            print("所有开始恢复默认")
             self.pathViews.forEach{$0.alpha = self.config.darkAlpha}
             
         }) { (finish) in
@@ -413,8 +417,20 @@ extension SJRefreshView {
         timer = Timer.scheduledTimer(timeInterval: config.animConfig.stepLength, target: self, selector: #selector(flashPath), userInfo: nil, repeats: true)
     }
     
-    func cancelAnime() {
+    func startFinishAnime() {
+        
+        timer?.invalidate()
+        
+        if !config.animConfig.isDismissAnime { return }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1 / 60, target: self, selector: #selector(finishAnime), userInfo: nil, repeats: true)
+        pullingPercent = 1
+    }
     
+    
+    func endTimer() {
+        
+        currentIndex = 0
         timer?.invalidate()
         timer = nil
     }

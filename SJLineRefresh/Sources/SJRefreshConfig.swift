@@ -21,7 +21,7 @@ public struct SJRefreshConfig {
     public var animConfig = SJAnimateConfig()
     
     /// scrollview drop down height
-    public var dropHeight: CGFloat = 64
+    public var dropHeight: CGFloat = 80
 
     /// pathView's center offset
     public var centerOffset = CGPoint.zero

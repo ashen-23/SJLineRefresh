@@ -49,7 +49,7 @@ enum HHConfigType: String {
             
         case .disappearDuration:
             
-            SJRefreshManager.default.defaultConfig.animConfig.disappearDuration = Double(paraValue)
+            SJRefreshManager.default.defaultConfig.animConfig.animeDuration = Double(paraValue)
             
         case .animateFactor:
             SJRefreshManager.default.defaultConfig.animConfig.animateFactor = paraValue
@@ -107,7 +107,7 @@ class SJConfigModel {
         let aRandom = SJConfigModel(type: HHConfigType.randomness, defaultVaule: CGFloat(aConfig.animConfig.randomness))
         defaults.append(aRandom)
         
-        let aDisappearDuration = SJConfigModel(type: HHConfigType.disappearDuration, defaultVaule: CGFloat(aConfig.animConfig.disappearDuration))
+        let aDisappearDuration = SJConfigModel(type: HHConfigType.disappearDuration, defaultVaule: CGFloat(aConfig.animConfig.animeDuration))
         defaults.append(aDisappearDuration)
         
         let aAnimateFactor = SJConfigModel(type: HHConfigType.animateFactor, defaultVaule: aConfig.animConfig.animateFactor)
