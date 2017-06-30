@@ -55,6 +55,6 @@ extension SJBaseDemoController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 45 : 300
+        return indexPath.row == 0 ? 40 : 300
     }
 }

@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="335" height="76"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="335" height="76"/>
+                <rect key="frame" x="0.0" y="0.0" width="335" height="75.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cEN-m6-0PV">
@@ -29,11 +29,13 @@
                         </connections>
                     </segmentedControl>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="cEN-m6-0PV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ymn-dh-OSk"/>
                     <constraint firstItem="cEN-m6-0PV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eGJ-9G-JAQ"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="segment" destination="cEN-m6-0PV" id="X7q-cM-tXC"/>
             </connections>
