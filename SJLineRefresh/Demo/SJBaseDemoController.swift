@@ -23,6 +23,7 @@ class SJBaseDemoController: UIViewController {
         title = demoType.rawValue
         
         tableView.register(UINib(nibName: "SJTableViewCell", bundle: nil), forCellReuseIdentifier: "test")
+        tableView.register(UINib(nibName: "SJStyleCell", bundle: nil), forCellReuseIdentifier: "segment")
         tableView.separatorStyle = .none
     }
 
@@ -38,10 +39,22 @@ extension SJBaseDemoController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if indexPath.row == 0 {
+            
+           let aCell = tableView.dequeueReusableCell(withIdentifier: "segment", for: indexPath) as! SJStyleCell
+            aCell.defaultIndex = mConfig.animConfig.style.rawValue
+            
+            aCell.changeStyle = { [weak self] in
+                
+                self?.tableView.sj_header?.config.animConfig.style = $0
+            }
+            return aCell
+        }
+        
         return tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return indexPath.row == 0 ? 45 : 300
     }
 }

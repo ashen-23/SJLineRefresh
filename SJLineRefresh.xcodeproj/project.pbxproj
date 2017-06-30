@@ -46,11 +46,13 @@
 		95C6B7A81EFA629800E5B8C1 /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7A51EFA629800E5B8C1 /* AKTA.plist */; };
 		95C6B7A91EFA629800E5B8C1 /* LOL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7A61EFA629800E5B8C1 /* LOL.plist */; };
 		95C6B7AA1EFA629800E5B8C1 /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7A71EFA629800E5B8C1 /* storehouse.plist */; };
-		95D822211EF7C5B7007C1CBB /* demo+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822201EF7C5B7007C1CBB /* demo+extension.swift */; };
+		95D822211EF7C5B7007C1CBB /* Demo+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822201EF7C5B7007C1CBB /* Demo+extension.swift */; };
 		95D822231EF7C943007C1CBB /* SJNormalUseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822221EF7C943007C1CBB /* SJNormalUseController.swift */; };
 		95D822251EF7CA86007C1CBB /* SJBaseDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */; };
 		95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */; };
 		95DA684B1ED29998003FAB74 /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
+		DAB7B32E1F069E5B00D0CBEE /* SJStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7B32C1F069E5B00D0CBEE /* SJStyleCell.swift */; };
+		DAB7B32F1F069E5B00D0CBEE /* SJStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB7B32D1F069E5B00D0CBEE /* SJStyleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,11 +112,13 @@
 		95C6B7A51EFA629800E5B8C1 /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AKTA.plist; path = SJLineRefresh/AKTA.plist; sourceTree = SOURCE_ROOT; };
 		95C6B7A61EFA629800E5B8C1 /* LOL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LOL.plist; path = SJLineRefresh/LOL.plist; sourceTree = SOURCE_ROOT; };
 		95C6B7A71EFA629800E5B8C1 /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = storehouse.plist; path = SJLineRefresh/storehouse.plist; sourceTree = SOURCE_ROOT; };
-		95D822201EF7C5B7007C1CBB /* demo+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "demo+extension.swift"; sourceTree = "<group>"; };
+		95D822201EF7C5B7007C1CBB /* Demo+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Demo+extension.swift"; sourceTree = "<group>"; };
 		95D822221EF7C943007C1CBB /* SJNormalUseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNormalUseController.swift; sourceTree = "<group>"; };
 		95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJBaseDemoController.swift; sourceTree = "<group>"; };
 		95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStoreHouseController.swift; sourceTree = "<group>"; };
 		95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRefreshManager.swift; sourceTree = "<group>"; };
+		DAB7B32C1F069E5B00D0CBEE /* SJStyleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStyleCell.swift; sourceTree = "<group>"; };
+		DAB7B32D1F069E5B00D0CBEE /* SJStyleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJStyleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +207,7 @@
 				95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */,
 				958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */,
 				95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */,
-				95D822201EF7C5B7007C1CBB /* demo+extension.swift */,
+				95D822201EF7C5B7007C1CBB /* Demo+extension.swift */,
 				9599390E1EF937BF004784A2 /* Cell */,
 				958D8C4A1EE953480031CDA5 /* View */,
 			);
@@ -239,6 +243,8 @@
 				958D8C511EE953480031CDA5 /* SJConfigCell.swift */,
 				959939091EF93420004784A2 /* SJTableViewCell.xib */,
 				9599390F1EF937D0004784A2 /* SJSectionCell.swift */,
+				DAB7B32C1F069E5B00D0CBEE /* SJStyleCell.swift */,
+				DAB7B32D1F069E5B00D0CBEE /* SJStyleCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				95C6B79A1EFA624F00E5B8C1 /* SJLineRefresh.bundle in Resources */,
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				9599390B1EF93420004784A2 /* SJTableViewCell.xib in Resources */,
+				DAB7B32F1F069E5B00D0CBEE /* SJStyleCell.xib in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
 				958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */,
 				95C6B7A81EFA629800E5B8C1 /* AKTA.plist in Resources */,
@@ -378,9 +385,10 @@
 				958D8C521EE953480031CDA5 /* SJHeaderView.swift in Sources */,
 				956407E71ECEF4A300ED9239 /* SJLinePathView.swift in Sources */,
 				95D822231EF7C943007C1CBB /* SJNormalUseController.swift in Sources */,
+				DAB7B32E1F069E5B00D0CBEE /* SJStyleCell.swift in Sources */,
 				956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */,
 				95D822251EF7CA86007C1CBB /* SJBaseDemoController.swift in Sources */,
-				95D822211EF7C5B7007C1CBB /* demo+extension.swift in Sources */,
+				95D822211EF7C5B7007C1CBB /* Demo+extension.swift in Sources */,
 				95D8222B1EF8B9FB007C1CBB /* SJStoreHouseController.swift in Sources */,
 				956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */,
 				956407E51ECEF47C00ED9239 /* SJRefreshView.swift in Sources */,
@@ -636,6 +644,7 @@
 				958B02611EFA6F100081285F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

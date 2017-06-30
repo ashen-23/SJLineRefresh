@@ -28,7 +28,7 @@ class SJStoreHouseController: SJBaseDemoController {
     func setupRefresh() {
         
         let aPath = Bundle.main.path(forResource: demoType.rawValue, ofType: "plist")!
-        let aConfig = SJRefreshConfig(plist: aPath).build {
+        mConfig = SJRefreshConfig(plist: aPath).build {
             
             $0.lineColor = UIColor.white
             $0.lineWidth = 2
@@ -37,7 +37,7 @@ class SJStoreHouseController: SJBaseDemoController {
             $0.animConfig.stepDuration = 0.5
         }
         
-        tableView.sj_header = SJRefreshView(config: aConfig, refresh: { [weak self] in
+        tableView.sj_header = SJRefreshView(config: mConfig, refresh: { [weak self] in
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 

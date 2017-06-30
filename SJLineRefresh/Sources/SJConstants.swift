@@ -25,20 +25,25 @@ public enum SJRefreshState: Int {
 
 /// animation style
 ///
-/// - reverse: reverse loading direction
 /// - normal: default
-/// - step: add line step by step
 /// - stay: flash will not disappear
+/// - step: add line step by step
+/// - reverse: reverse loading direction
 public enum SJAnimateStyle: Int {
     
-    case reverse
-    case normal
-    case step
+    case normal = 0
     case stay
-    
+    case step
+    case reverse
+
     func isStep() -> Bool {
         
         return self == .step
+    }
+    
+    static func allStyles() -> [SJAnimateStyle] {
+        
+        return [.reverse, .normal, .step, .stay]
     }
 }
 
