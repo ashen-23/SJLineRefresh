@@ -2,7 +2,7 @@
 
 - **what's this?**
 ***
-A easy customizable shape pull-to-refresh control [中文介绍](./README-chiness.md)
+A easy customizable shape pull-to-refresh control [中文介绍]()
 
 ![pology](./images/polygon.gif)
 ![LOL](./images/LOL.gif)
