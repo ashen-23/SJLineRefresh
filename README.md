@@ -1,6 +1,6 @@
 ![](./images/SJLineRefresh-icon.png)
 
-![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat)![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat)![](https://img.shields.io/badge/language-swift 3.0-orange.svg)
+![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat)![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat)![](https://img.shields.io/badge/language-swift3.0-orange.svg)
 
 - **what's this?**
 ***
