@@ -1,13 +1,13 @@
-# SJLineRefresh
+![](./images/SJLineRefresh-icon.png)
+
+![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat)![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat)![](https://img.shields.io/badge/language-swift 3.0-orange.svg)
 
 - **what's this?**
 ***
 A easy customizable shape pull-to-refresh control [中文介绍](./README-chiness.md)
 
-![pology](./images/polygon.gif)
-![LOL](./images/LOL.gif)
-![AKTA](./images/AKTA.gif)
-![debug](./images/debug.gif)
+![pology](./images/polygon.gif)![LOL](./images/LOL.gif)
+![AKTA](./images/AKTA.gif)![debug](./images/debug.gif)
 
 - **how to use**
 ***
