@@ -1,72 +1,70 @@
 # SJLineRefresh
 
-- **what's this?**
+- **介绍**
 ***
-A easy customizable shape pull-to-refresh control [中文介绍]()
+高度自定义的线性下拉刷新控件
 
-![pology](./images/polygon.gif)
-![LOL](./images/LOL.gif)
-![AKTA](./images/AKTA.gif)
-![debug](./images/debug.gif)
-
-- **how to use**
+- **使用**
 ***
-```
+ ` 1.基础用法`
+```swift
 let aPath = Bundle.main.path(forResource: "HHMedic", ofType: "plist")!
 let aConfig = SJRefreshConfig(plist: aPath)
 tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
   // do your refresh
 }
-
+```
+` 2.全局使用`
+```swift
+let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
+SJRefreshManager.default.defaultConfig = SJRefreshConfig(plist: aPath) // 设置全局config
+tableView.sj_header = SJRefreshView.default { [weak self] in
+	// 刷新回调
+	// 结束刷新
+	self?.tableView.endRefresh()
+}
+// plist只加载一次
+```
+` 3.手动刷新/结束`
+```swift
+tableView.beginRefresh() // 手动开始刷新
+tableView.endRefresh()   // 结束刷新
 ```
 
-- **how to create shape**
+` 4.动画参数`
+```swift
+startRatio // 开始动画的起始点与整个高度的比例
+endRatio   // 结束动画的起始点与整个高度的比例
+stepLength // 每个line"闪烁"所用时间
+stepDuration // "闪烁"的动画时长
+style  // 动画类型
+	normal // 默认
+	stay   // "闪烁"完成后保持闪烁状态
+	step   // 下拉时,一个line绘制完成后才继续下一个绘制
+	reverse //从最后一个line往前"闪烁
+```
+
+- **创建形状**
 ***
-only support line shape now.
 
-[PaintCode](https://www.paintcodeapp.com) is a app that can turn drawings into Objective-C or swift code.
-![paintCode](./images/paintCode.png)
-
-```
-- drawing lines whatever you want;
-- paste the points that PaintCode genarated into your own plist(startPoints, endPoint);
-- the refreshView's maxWidth is equal to the max x of points in step 2. so does the maxHeight.
+```descript
+- 使用PaintCode画线, 在plist中写入对应的所有线条的起始点和终点(数量要保持一致)
+- 下拉刷新视图的宽高等于起点和终点的最大距离, 居中对齐
 ```
 
-- **Installation**
+- **安装**
 ***
 **CocoaPods**
 
-[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects.
-```
-$ gem install cocoapods
-```
-
-To integrate Alamofire into your Xcode project using CocoaPods, specify it in your Podfile
-:
-```
+```ruby
 pod 'SJLineRefresh', '~> 1.1.1'
 ```
-Then, run the following command:
-```
-$ pod install
-```
-
 **Carthage**
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-```
-$ brew update
-$ brew install carthage
-```
-To integrate Alamofire into your Xcode project using Carthage, specify it in your Cartfile :
 ```
 github "515783034/SJLIineRefresh" ~> 1.1.1
 ```
-Run carthage update to build the framework and drag the built SJLineRefresh.framework into your Xcode project.
 
-- **Reference**
+- **参考**
 ***
 [MJRefresh](https://github.com/CoderMJLee/MJRefresh)
 
