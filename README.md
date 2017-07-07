@@ -6,8 +6,13 @@
 ***
 A easy customizable shape pull-to-refresh control [中文介绍](./README-chiness.md)
 
-![pology](./images/polygon.gif)![LOL](./images/LOL.gif)
-![AKTA](./images/AKTA.gif)![debug](./images/debug.gif)
+![pology](./images/polygon.gif) ![LOL](./images/LOL.gif)
+
+![AKTA](./images/AKTA.gif) ![stay -style](./images/stay.gif)
+
+![step -style](./images/step.gif)
+
+![debug](./images/debug.gif)
 
 - **how to use**
 ***

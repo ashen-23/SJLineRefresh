@@ -29,7 +29,6 @@
 		958B02691EFA6F570081285F /* SJScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */; };
 		958B026A1EFA6F570081285F /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
 		958B026B1EFA6F570081285F /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
-		958B026C1EFA6F760081285F /* polygon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7971EFA624F00E5B8C1 /* polygon.plist */; };
 		958B026D1EFA6F760081285F /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7981EFA624F00E5B8C1 /* SJLineRefresh.bundle */; };
 		958D8C521EE953480031CDA5 /* SJHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4B1EE953480031CDA5 /* SJHeaderView.swift */; };
 		958D8C531EE953480031CDA5 /* SJConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4C1EE953480031CDA5 /* SJConfigModel.swift */; };
@@ -38,14 +37,14 @@
 		958D8C561EE953480031CDA5 /* SJConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4F1EE953480031CDA5 /* SJConfigView.swift */; };
 		958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958D8C501EE953480031CDA5 /* SJConfigView.xib */; };
 		958D8C581EE953480031CDA5 /* SJConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C511EE953480031CDA5 /* SJConfigCell.swift */; };
+		959623751F0F7E95004CD54E /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959623711F0F7E95004CD54E /* AKTA.plist */; };
+		959623761F0F7E95004CD54E /* LOL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959623721F0F7E95004CD54E /* LOL.plist */; };
+		959623771F0F7E95004CD54E /* polygon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959623731F0F7E95004CD54E /* polygon.plist */; };
+		959623781F0F7E95004CD54E /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959623741F0F7E95004CD54E /* storehouse.plist */; };
 		9599390B1EF93420004784A2 /* SJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959939091EF93420004784A2 /* SJTableViewCell.xib */; };
 		9599390D1EF934D6004784A2 /* SJTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599390C1EF934D6004784A2 /* SJTestCell.swift */; };
 		959939101EF937D0004784A2 /* SJSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599390F1EF937D0004784A2 /* SJSectionCell.swift */; };
-		95C6B7991EFA624F00E5B8C1 /* polygon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7971EFA624F00E5B8C1 /* polygon.plist */; };
 		95C6B79A1EFA624F00E5B8C1 /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7981EFA624F00E5B8C1 /* SJLineRefresh.bundle */; };
-		95C6B7A81EFA629800E5B8C1 /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7A51EFA629800E5B8C1 /* AKTA.plist */; };
-		95C6B7A91EFA629800E5B8C1 /* LOL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7A61EFA629800E5B8C1 /* LOL.plist */; };
-		95C6B7AA1EFA629800E5B8C1 /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7A71EFA629800E5B8C1 /* storehouse.plist */; };
 		95D822211EF7C5B7007C1CBB /* Demo+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822201EF7C5B7007C1CBB /* Demo+extension.swift */; };
 		95D822231EF7C943007C1CBB /* SJNormalUseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822221EF7C943007C1CBB /* SJNormalUseController.swift */; };
 		95D822251EF7CA86007C1CBB /* SJBaseDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */; };
@@ -104,14 +103,14 @@
 		958D8C4F1EE953480031CDA5 /* SJConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigView.swift; sourceTree = "<group>"; };
 		958D8C501EE953480031CDA5 /* SJConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJConfigView.xib; sourceTree = "<group>"; };
 		958D8C511EE953480031CDA5 /* SJConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJConfigCell.swift; path = ../View/SJConfigCell.swift; sourceTree = "<group>"; };
+		959623711F0F7E95004CD54E /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
+		959623721F0F7E95004CD54E /* LOL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LOL.plist; sourceTree = "<group>"; };
+		959623731F0F7E95004CD54E /* polygon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = polygon.plist; sourceTree = "<group>"; };
+		959623741F0F7E95004CD54E /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		959939091EF93420004784A2 /* SJTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJTableViewCell.xib; path = ../View/SJTableViewCell.xib; sourceTree = "<group>"; };
 		9599390C1EF934D6004784A2 /* SJTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJTestCell.swift; path = ../View/SJTestCell.swift; sourceTree = "<group>"; };
 		9599390F1EF937D0004784A2 /* SJSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSectionCell.swift; sourceTree = "<group>"; };
-		95C6B7971EFA624F00E5B8C1 /* polygon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = polygon.plist; sourceTree = "<group>"; };
 		95C6B7981EFA624F00E5B8C1 /* SJLineRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SJLineRefresh.bundle; sourceTree = "<group>"; };
-		95C6B7A51EFA629800E5B8C1 /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AKTA.plist; path = SJLineRefresh/AKTA.plist; sourceTree = SOURCE_ROOT; };
-		95C6B7A61EFA629800E5B8C1 /* LOL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LOL.plist; path = SJLineRefresh/LOL.plist; sourceTree = SOURCE_ROOT; };
-		95C6B7A71EFA629800E5B8C1 /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = storehouse.plist; path = SJLineRefresh/storehouse.plist; sourceTree = SOURCE_ROOT; };
 		95D822201EF7C5B7007C1CBB /* Demo+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Demo+extension.swift"; sourceTree = "<group>"; };
 		95D822221EF7C943007C1CBB /* SJNormalUseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNormalUseController.swift; sourceTree = "<group>"; };
 		95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJBaseDemoController.swift; sourceTree = "<group>"; };
@@ -176,10 +175,10 @@
 		956407E21ECEF46800ED9239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				95C6B7A51EFA629800E5B8C1 /* AKTA.plist */,
-				95C6B7A61EFA629800E5B8C1 /* LOL.plist */,
-				95C6B7A71EFA629800E5B8C1 /* storehouse.plist */,
-				95C6B7971EFA624F00E5B8C1 /* polygon.plist */,
+				959623711F0F7E95004CD54E /* AKTA.plist */,
+				959623721F0F7E95004CD54E /* LOL.plist */,
+				959623731F0F7E95004CD54E /* polygon.plist */,
+				959623741F0F7E95004CD54E /* storehouse.plist */,
 				95C6B7981EFA624F00E5B8C1 /* SJLineRefresh.bundle */,
 			);
 			path = Resources;
@@ -347,16 +346,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C6B7A91EFA629800E5B8C1 /* LOL.plist in Resources */,
-				95C6B7AA1EFA629800E5B8C1 /* storehouse.plist in Resources */,
+				959623781F0F7E95004CD54E /* storehouse.plist in Resources */,
+				959623761F0F7E95004CD54E /* LOL.plist in Resources */,
 				95C6B79A1EFA624F00E5B8C1 /* SJLineRefresh.bundle in Resources */,
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				9599390B1EF93420004784A2 /* SJTableViewCell.xib in Resources */,
 				DAB7B32F1F069E5B00D0CBEE /* SJStyleCell.xib in Resources */,
 				956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */,
+				959623751F0F7E95004CD54E /* AKTA.plist in Resources */,
+				959623771F0F7E95004CD54E /* polygon.plist in Resources */,
 				958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */,
-				95C6B7A81EFA629800E5B8C1 /* AKTA.plist in Resources */,
-				95C6B7991EFA624F00E5B8C1 /* polygon.plist in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958B026C1EFA6F760081285F /* polygon.plist in Resources */,
 				958B026D1EFA6F760081285F /* SJLineRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

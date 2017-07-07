@@ -27,7 +27,7 @@ extension SJRefreshManager {
     
     func deomConfig() {
         
-        let aPath = getCurrentBundle().path(forResource: "HHMedic", ofType: "plist") ?? ""
+        let aPath = getCurrentBundle().path(forResource: "polygon", ofType: "plist") ?? ""
         SJRefreshManager.default.defaultConfig = SJRefreshConfig(plist: aPath).build {
             
             $0.lineColor = UIColor(red:47.0/255,green:148.0/255,blue:255.0/255,alpha:1)
