@@ -12,7 +12,6 @@ A easy customizable shape pull-to-refresh control [中文介绍](./README-chines
 
 ![step -style](./images/step.gif)
 
-![debug](./images/debug.gif)
 
 - **how to use**
 ***

@@ -43,6 +43,7 @@ style  // 动画类型
 	step   // 下拉时,一个line绘制完成后才继续下一个绘制
 	reverse //从最后一个line往前"闪烁
 ```
+![debug](./images/debug.gif)
 
 - **创建形状**
 ***
