@@ -55,6 +55,12 @@ class SJDemoListController: UITableViewController {
         
         tableView.tableFooterView = UIView()
         
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+            tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0)
+            tableView.scrollIndicatorInsets = tableView.contentInset
+        }
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

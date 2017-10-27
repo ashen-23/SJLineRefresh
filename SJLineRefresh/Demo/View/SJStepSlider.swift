@@ -34,7 +34,7 @@ class SJStepSlider: UISlider {
         addTarget(self, action: #selector(changeSlider), for: UIControlEvents.valueChanged)
     }
     
-    func changeSlider() {
+    @objc func changeSlider() {
         
         self.setValue(getRealValue(setted: self.value), animated: true)
         

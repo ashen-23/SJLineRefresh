@@ -301,7 +301,7 @@ extension SJRefreshView {
     }
 
     /// make line path flashed
-    func flashPath() {
+    @objc func flashPath() {
         
         if state != .refresing { return }
         
@@ -325,7 +325,7 @@ extension SJRefreshView {
 
     }
     
-    func finishAnime() {
+    @objc func finishAnime() {
         
         pullingPercent = (pullingPercent ?? 1) - CGFloat(1 / 60 / config.animConfig.animeDuration)
         updatePathView()
