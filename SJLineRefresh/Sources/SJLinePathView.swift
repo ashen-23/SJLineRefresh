@@ -47,8 +47,8 @@ public class SJLinePathView: UIView {
     }
     
     func setRadom() {
-        
-        translationX = CGFloat(-config.animConfig.randomness + Int(arc4random()) % config.animConfig.randomness * 2)
+        let random = Int(arc4random_uniform(UInt32(config.animConfig.randomness)) * 2)
+        translationX = CGFloat(-config.animConfig.randomness + random)
         transform = CGAffineTransform(translationX: translationX, y: -config.dropHeight)
     }
 
