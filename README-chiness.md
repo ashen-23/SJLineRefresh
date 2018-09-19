@@ -1,6 +1,6 @@
 # SJLineRefresh
 
-适配: swift4.2
+![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift4.2-orange.svg)
 
 - **介绍**
 ***
