@@ -189,9 +189,9 @@ extension SJRefreshView {
         
         for i in 0..<aStarts.count {
             
-            let aStart = CGPointFromString(aStarts[i])
-            let aEnd = CGPointFromString(aEnds[i])
-            
+            let aStart = NSCoder.cgPoint(for: aStarts[i])
+            let aEnd = NSCoder.cgPoint(for:aEnds[i])
+                        
             width = max(width, aStart.x, aEnd.x)
             height = max(height, aStart.y, aEnd.y)
         }
@@ -205,8 +205,8 @@ extension SJRefreshView {
         for i in 0..<aStarts.count {
             
             var aConfig = config
-            aConfig.startPoint = CGPointFromString(aStarts[i])
-            aConfig.endPoint = CGPointFromString(aEnds[i])
+            aConfig.startPoint = NSCoder.cgPoint(for: aStarts[i])
+            aConfig.endPoint = NSCoder.cgPoint(for: aEnds[i])
             
             let aPathView = SJLinePathView(frame: frame, config: aConfig)
             aPathView.tag = i

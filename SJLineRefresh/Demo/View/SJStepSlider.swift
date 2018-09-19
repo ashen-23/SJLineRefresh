@@ -31,7 +31,7 @@ class SJStepSlider: UISlider {
         
         self.isContinuous = false
 
-        addTarget(self, action: #selector(changeSlider), for: UIControlEvents.valueChanged)
+        addTarget(self, action: #selector(changeSlider), for: UIControl.Event.valueChanged)
     }
     
     @objc func changeSlider() {

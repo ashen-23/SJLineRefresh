@@ -28,7 +28,7 @@ class SJBaseDemoController: UIViewController {
         
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
-            tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0)
+            tableView.contentInset = UIEdgeInsets.init(top: 64, left: 0, bottom: 49, right: 0)
             tableView.scrollIndicatorInsets = tableView.contentInset
         }
     }
