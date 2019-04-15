@@ -2,6 +2,8 @@
 
 ![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift4.2-orange.svg)
 
+SJLineRefresh 是用 swift5 写的高度自定义的线性下拉刷新控件。
+
 - **介绍**
 ***
 高度自定义的线性下拉刷新控件
