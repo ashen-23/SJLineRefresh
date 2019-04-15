@@ -8,9 +8,7 @@
 import UIKit
 
 let kStartPoints = "startPoints"
-
 let kEndPoints = "endPoints"
-
 let kScrollviewContentPffset = "contentOffset"
 
 public enum SJRefreshState: Int {
@@ -42,36 +40,30 @@ public enum SJAnimateStyle: Int {
     }
     
     static func allStyles() -> [SJAnimateStyle] {
-        
         return [.reverse, .normal, .step, .stay]
     }
 }
 
 
 // 获取当前组件的bundle
-func getCurrentBundle() -> Bundle
-{
+func getCurrentBundle() -> Bundle {
     return Bundle(for: SJRefreshView.self)
 }
 
 func getResourceBundle() -> Bundle {
-    
     let aURl = getCurrentBundle().url(forResource: "SJLineRefresh", withExtension: "bundle")!
     
     return Bundle(url: aURl)!
 }
 
 func getImage(name: String) -> UIImage {
-    
     guard let aPath = getResourceBundle().path(forResource: name, ofType: "png") else { return UIImage() }
     return UIImage(contentsOfFile: aPath) ?? UIImage()
 }
 
-
 extension CGRect {
     
     var sj_width: CGFloat {
-        
         get {
             return size.width
         }
@@ -81,7 +73,6 @@ extension CGRect {
     }
     
     var sj_height: CGFloat {
-        
         get {
             return size.height
         }
@@ -91,7 +82,6 @@ extension CGRect {
     }
     
     var sj_x: CGFloat {
-        
         get {
             return origin.x
         }
@@ -102,7 +92,6 @@ extension CGRect {
     }
     
     var sj_y: CGFloat {
-        
         get {
             return origin.y
         }

@@ -31,7 +31,6 @@ public struct SJAnimateConfig {
 
     public var randomness: Int = 150 {
         didSet {
-            
             if randomness <= 0 {
                 randomness = 1
             }

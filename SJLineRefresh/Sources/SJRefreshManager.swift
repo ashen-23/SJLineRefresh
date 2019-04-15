@@ -21,9 +21,7 @@ public class SJRefreshManager {
     public var defaultConfig = SJRefreshConfig()
     
     public func fetchPoints(path: String) -> ([String]?, [String]?) {
-        
-        if plistPath != path {
-            
+        if plistPath != path {            
             let aDict = NSDictionary.init(contentsOfFile: path)
             startPoints = aDict?.object(forKey: kStartPoints) as? [String]
             endPoints = aDict?.object(forKey: kEndPoints) as? [String]

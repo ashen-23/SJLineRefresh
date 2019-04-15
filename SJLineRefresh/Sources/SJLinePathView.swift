@@ -27,20 +27,16 @@ public class SJLinePathView: UIView {
     }
     
     public init(frame: CGRect, config: SJRefreshConfig) {
-        
         super.init(frame: frame)
         
         self.config = config
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        
         super.init(coder: aDecoder)
     }
     
-    
     func setUp() {
-        
         layer.anchorPoint = CGPoint(x: config.middlePoint.x / frame.size.width, y: config.middlePoint.y / frame.size.height)
         
         frame = CGRect(x: frame.sj_x + config.middlePoint.x - frame.sj_width / 2, y: frame.sj_y + config.middlePoint.y - frame.sj_height / 2, width: frame.sj_width, height: frame.sj_height)

@@ -313,7 +313,7 @@
 					956407CC1ECEF3AE00ED9239 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 773A426V2P;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					958B02561EFA6F0F0081285F = {
@@ -325,7 +325,7 @@
 			};
 			buildConfigurationList = 956407C81ECEF3AE00ED9239 /* Build configuration list for PBXProject "SJLineRefresh" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -569,7 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shmily.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -583,7 +583,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shmily.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -604,7 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shmily.openSource.SJLineRefresh-iOS";
 				PRODUCT_NAME = SJLineRefresh;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -627,7 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shmily.openSource.SJLineRefresh-iOS";
 				PRODUCT_NAME = SJLineRefresh;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

@@ -61,16 +61,13 @@ public struct SJRefreshConfig {
     var middlePoint = CGPoint.zero
     
     public init() {
-    
     }
     
     /// init
     ///
     /// - Parameter plist: path for plist file with line points
     public init(plist: String) {
-        
         plistPath = plist
-        
     }
     
     /// config refresh parameters

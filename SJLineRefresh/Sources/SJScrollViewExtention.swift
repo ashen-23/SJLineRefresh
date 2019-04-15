@@ -12,34 +12,26 @@ private var key: Void?
 
 public extension UIScrollView {
     
-    public var sj_header: SJRefreshView? {
-        
+    var sj_header: SJRefreshView? {
         get {
             return objc_getAssociatedObject(self, &key) as? SJRefreshView
         }
         
         set {
-            
             objc_setAssociatedObject(self, &key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            
             sj_header?.removeFromSuperview()
             if let aHeader = sj_header {
                 self.insertSubview(aHeader, at: 0)
             }
-            
         }
     }
     
-    public func beginRefresh() {
-        
+    func beginRefresh() {
         sj_header?.beginRefresh()
     }
     
-    public func endRefresh() {
-    
+    func endRefresh() {
         sj_header?.endRefresh()
-        
     }
-    
     
 }
