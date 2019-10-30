@@ -1,6 +1,6 @@
 # SJLineRefresh
 
-![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift5-orange.svg)
+![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift5-orange.svg)
 
 SJLineRefresh 是用 swift5 写的高度自定义的线性下拉刷新控件。
 
@@ -47,7 +47,7 @@ style  // 动画类型
 	step   // 下拉时,一个line绘制完成后才继续下一个绘制
 	reverse //从最后一个line往前"闪烁
 ```
-![debug](./images/debug.gif)
+![debug](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/debug.gif)
 
 - **创建形状**
 ***

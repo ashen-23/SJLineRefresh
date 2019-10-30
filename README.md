@@ -1,4 +1,4 @@
-![](./images/SJLineRefresh-icon.png)
+![](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/SJLineRefresh-icon.png)
 
 ![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift5-orange.svg)
 
@@ -8,11 +8,11 @@ SJLineRefresh is an easy customizable shape pull-to-refresh library written in S
 ***
 A easy customizable shape pull-to-refresh control [中文介绍](./README-chiness.md)
 
-![pology](imgs/polygon.gif) ![LOL](imgs/LOL.gif)
+![pology](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/polygon.gif) ![LOL](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/LOL.gif)
 
-![AKTA](imgs/AKTA.gif) ![stay -style](imgs/stay.gif)
+![AKTA](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/AKTA.gif) ![stay -style](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/stay.gif)
 
-![step -style](imgs/step.gif)
+![step -style](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/step.gif)
 
 
 - **how to use**
@@ -31,7 +31,7 @@ tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
 only support line shape now.
 
 [PaintCode](https://www.paintcodeapp.com) is a app that can turn drawings into Objective-C or swift code.
-![paintCode](./images/paintCode.png)
+![paintCode](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/polygon.gif/paintCode.png)
 
 ```
 - drawing lines whatever you want;
