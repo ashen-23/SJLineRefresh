@@ -1,6 +1,6 @@
 ![](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/SJLineRefresh-icon.png)
 
-![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift5-orange.svg)
+![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift5-orange.svg)
 
 SJLineRefresh is an easy customizable shape pull-to-refresh library written in Swift5.
 
@@ -31,7 +31,7 @@ tableView.sj_header = SJRefreshView(config: aConfig) { [weak self] in
 only support line shape now.
 
 [PaintCode](https://www.paintcodeapp.com) is a app that can turn drawings into Objective-C or swift code.
-![paintCode](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/polygon.gif/paintCode.png)
+![paintCode](https://github.com/515783034/SJLIineRefresh/blob/master/imgs/paintCode.png)
 
 ```
 - drawing lines whatever you want;
