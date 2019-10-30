@@ -4,9 +4,10 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "SJLineRefresh"
-  s.version      = "1.1.3"
+  s.version      = "1.1.5"
   s.summary      = "A easy customizable shape pull-to-refresh view in UIScrolView."
-
+  s.swift_version = '5'
+  
 
   s.description  = <<-DESC
                     A pull-to-refresh control that you could use your own share easily.
