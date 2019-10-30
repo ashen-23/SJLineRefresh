@@ -1,6 +1,6 @@
 ![](./images/SJLineRefresh-icon.png)
 
-![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift4.2-orange.svg)
+![](https://img.shields.io/cocoapods/v/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/cocoapods/p/SJLineRefresh.svg?style=flat) ![](https://img.shields.io/badge/language-swift5-orange.svg)
 
 SJLineRefresh is an easy customizable shape pull-to-refresh library written in Swift5.
 
@@ -8,11 +8,11 @@ SJLineRefresh is an easy customizable shape pull-to-refresh library written in S
 ***
 A easy customizable shape pull-to-refresh control [中文介绍](./README-chiness.md)
 
-![pology](./images/polygon.gif) ![LOL](./images/LOL.gif)
+![pology](imgs/polygon.gif) ![LOL](imgs/LOL.gif)
 
-![AKTA](./images/AKTA.gif) ![stay -style](./images/stay.gif)
+![AKTA](imgs/AKTA.gif) ![stay -style](imgs/stay.gif)
 
-![step -style](./images/step.gif)
+![step -style](imgs/step.gif)
 
 
 - **how to use**
