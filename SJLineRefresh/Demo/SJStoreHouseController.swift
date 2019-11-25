@@ -12,21 +12,17 @@ class SJStoreHouseController: SJBaseDemoController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.backgroundColor = UIColor(patternImage: UIImage(named: "bg_pattern")!)
         
         setupRefresh()
     }
-
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         tableView.beginRefresh()
     }
     
     func setupRefresh() {
-        
         let aPath = Bundle.main.path(forResource: demoType.rawValue, ofType: "plist")!
         mConfig = SJRefreshConfig(plist: aPath).build {
             
@@ -38,9 +34,7 @@ class SJStoreHouseController: SJBaseDemoController {
         }
         
         tableView.sj_header = SJRefreshView(config: mConfig, refresh: { [weak self] in
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-                
                 self?.tableView.endRefresh()
             })
             

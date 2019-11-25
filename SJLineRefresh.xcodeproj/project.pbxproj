@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		952765701ED6F166003B14AB /* SJDemoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9527656F1ED6F166003B14AB /* SJDemoListController.swift */; };
+		954089F9238BAACB00A93D4B /* Other.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954089F8238BAACB00A93D4B /* Other.plist */; };
 		956407D11ECEF3AE00ED9239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407D01ECEF3AE00ED9239 /* AppDelegate.swift */; };
 		956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956407D41ECEF3AE00ED9239 /* Main.storyboard */; };
 		956407D81ECEF3AE00ED9239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956407D71ECEF3AE00ED9239 /* Assets.xcassets */; };
@@ -19,17 +20,6 @@
 		956407F31ED054D700ED9239 /* SJScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */; };
 		956407F71ED05EA300ED9239 /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
 		958AAA1C1ED6EE5400E4F512 /* SJDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */; };
-		958B025B1EFA6F0F0081285F /* SJLineRefresh iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 958B02591EFA6F0F0081285F /* SJLineRefresh iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		958B025E1EFA6F0F0081285F /* SJLineRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B02571EFA6F0F0081285F /* SJLineRefresh.framework */; };
-		958B025F1EFA6F0F0081285F /* SJLineRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 958B02571EFA6F0F0081285F /* SJLineRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		958B02651EFA6F570081285F /* SJRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E41ECEF47C00ED9239 /* SJRefreshView.swift */; };
-		958B02661EFA6F570081285F /* SJLinePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407E61ECEF4A300ED9239 /* SJLinePathView.swift */; };
-		958B02671EFA6F570081285F /* SJRefreshConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407EC1ECEFB5600ED9239 /* SJRefreshConfig.swift */; };
-		958B02681EFA6F570081285F /* SJConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407EE1ED01DBE00ED9239 /* SJConstants.swift */; };
-		958B02691EFA6F570081285F /* SJScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */; };
-		958B026A1EFA6F570081285F /* SJAnimateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */; };
-		958B026B1EFA6F570081285F /* SJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA684A1ED29998003FAB74 /* SJRefreshManager.swift */; };
-		958B026D1EFA6F760081285F /* SJLineRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95C6B7981EFA624F00E5B8C1 /* SJLineRefresh.bundle */; };
 		958D8C521EE953480031CDA5 /* SJHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4B1EE953480031CDA5 /* SJHeaderView.swift */; };
 		958D8C531EE953480031CDA5 /* SJConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4C1EE953480031CDA5 /* SJConfigModel.swift */; };
 		958D8C541EE953480031CDA5 /* SJConfigSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8C4D1EE953480031CDA5 /* SJConfigSectionCell.swift */; };
@@ -54,16 +44,6 @@
 		DAB7B32F1F069E5B00D0CBEE /* SJStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB7B32D1F069E5B00D0CBEE /* SJStyleCell.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		958B025C1EFA6F0F0081285F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 956407C51ECEF3AE00ED9239 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 958B02561EFA6F0F0081285F;
-			remoteInfo = "SJLineRefresh iOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		958B02631EFA6F100081285F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -71,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				958B025F1EFA6F0F0081285F /* SJLineRefresh.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		9527656F1ED6F166003B14AB /* SJDemoListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoListController.swift; sourceTree = "<group>"; };
+		954089F8238BAACB00A93D4B /* Other.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Other.plist; sourceTree = "<group>"; };
 		956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJLineRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956407D01ECEF3AE00ED9239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956407D51ECEF3AE00ED9239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,9 +73,6 @@
 		956407F21ED054D700ED9239 /* SJScrollViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJScrollViewExtention.swift; sourceTree = "<group>"; };
 		956407F61ED05EA300ED9239 /* SJAnimateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAnimateConfig.swift; sourceTree = "<group>"; };
 		958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDemoViewController.swift; sourceTree = "<group>"; };
-		958B02571EFA6F0F0081285F /* SJLineRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SJLineRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		958B02591EFA6F0F0081285F /* SJLineRefresh iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJLineRefresh iOS.h"; sourceTree = "<group>"; };
-		958B025A1EFA6F0F0081285F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958D8C4B1EE953480031CDA5 /* SJHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJHeaderView.swift; sourceTree = "<group>"; };
 		958D8C4C1EE953480031CDA5 /* SJConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigModel.swift; sourceTree = "<group>"; };
 		958D8C4D1EE953480031CDA5 /* SJConfigSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJConfigSectionCell.swift; sourceTree = "<group>"; };
@@ -125,14 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958B025E1EFA6F0F0081285F /* SJLineRefresh.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		958B02531EFA6F0F0081285F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				956407CF1ECEF3AE00ED9239 /* SJLineRefresh */,
-				958B02581EFA6F0F0081285F /* SJLineRefresh iOS */,
 				956407CE1ECEF3AE00ED9239 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */,
-				958B02571EFA6F0F0081285F /* SJLineRefresh.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +142,7 @@
 		956407E21ECEF46800ED9239 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				954089F8238BAACB00A93D4B /* Other.plist */,
 				959623711F0F7E95004CD54E /* AKTA.plist */,
 				959623721F0F7E95004CD54E /* LOL.plist */,
 				959623731F0F7E95004CD54E /* polygon.plist */,
@@ -201,25 +169,16 @@
 		958AAA161ED6EDF500E4F512 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				958D8C4A1EE953480031CDA5 /* View */,
+				9599390E1EF937BF004784A2 /* Cell */,
 				9527656F1ED6F166003B14AB /* SJDemoListController.swift */,
 				95D822221EF7C943007C1CBB /* SJNormalUseController.swift */,
 				95D8222A1EF8B9FB007C1CBB /* SJStoreHouseController.swift */,
 				958AAA1A1ED6EE5400E4F512 /* SJDemoViewController.swift */,
 				95D822241EF7CA86007C1CBB /* SJBaseDemoController.swift */,
 				95D822201EF7C5B7007C1CBB /* Demo+extension.swift */,
-				9599390E1EF937BF004784A2 /* Cell */,
-				958D8C4A1EE953480031CDA5 /* View */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		958B02581EFA6F0F0081285F /* SJLineRefresh iOS */ = {
-			isa = PBXGroup;
-			children = (
-				958B02591EFA6F0F0081285F /* SJLineRefresh iOS.h */,
-				958B025A1EFA6F0F0081285F /* Info.plist */,
-			);
-			path = "SJLineRefresh iOS";
 			sourceTree = "<group>";
 		};
 		958D8C4A1EE953480031CDA5 /* View */ = {
@@ -250,17 +209,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		958B02541EFA6F0F0081285F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				958B025B1EFA6F0F0081285F /* SJLineRefresh iOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		956407CC1ECEF3AE00ED9239 /* SJLineRefresh */ = {
 			isa = PBXNativeTarget;
@@ -274,30 +222,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				958B025D1EFA6F0F0081285F /* PBXTargetDependency */,
 			);
 			name = SJLineRefresh;
 			productName = SJLineRefresh;
 			productReference = 956407CD1ECEF3AE00ED9239 /* SJLineRefresh.app */;
 			productType = "com.apple.product-type.application";
-		};
-		958B02561EFA6F0F0081285F /* SJLineRefresh iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 958B02621EFA6F100081285F /* Build configuration list for PBXNativeTarget "SJLineRefresh iOS" */;
-			buildPhases = (
-				958B02521EFA6F0F0081285F /* Sources */,
-				958B02531EFA6F0F0081285F /* Frameworks */,
-				958B02541EFA6F0F0081285F /* Headers */,
-				958B02551EFA6F0F0081285F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SJLineRefresh iOS";
-			productName = "SJLineRefresh iOS";
-			productReference = 958B02571EFA6F0F0081285F /* SJLineRefresh.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -316,11 +245,6 @@
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
-					958B02561EFA6F0F0081285F = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 773A426V2P;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 956407C81ECEF3AE00ED9239 /* Build configuration list for PBXProject "SJLineRefresh" */;
@@ -337,7 +261,6 @@
 			projectRoot = "";
 			targets = (
 				956407CC1ECEF3AE00ED9239 /* SJLineRefresh */,
-				958B02561EFA6F0F0081285F /* SJLineRefresh iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -350,6 +273,7 @@
 				959623781F0F7E95004CD54E /* storehouse.plist in Resources */,
 				959623761F0F7E95004CD54E /* LOL.plist in Resources */,
 				95C6B79A1EFA624F00E5B8C1 /* SJLineRefresh.bundle in Resources */,
+				954089F9238BAACB00A93D4B /* Other.plist in Resources */,
 				956407DB1ECEF3AE00ED9239 /* LaunchScreen.storyboard in Resources */,
 				9599390B1EF93420004784A2 /* SJTableViewCell.xib in Resources */,
 				DAB7B32F1F069E5B00D0CBEE /* SJStyleCell.xib in Resources */,
@@ -358,14 +282,6 @@
 				959623771F0F7E95004CD54E /* polygon.plist in Resources */,
 				958D8C571EE953480031CDA5 /* SJConfigView.xib in Resources */,
 				956407D61ECEF3AE00ED9239 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		958B02551EFA6F0F0081285F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				958B026D1EFA6F760081285F /* SJLineRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,29 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		958B02521EFA6F0F0081285F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				958B02651EFA6F570081285F /* SJRefreshView.swift in Sources */,
-				958B02661EFA6F570081285F /* SJLinePathView.swift in Sources */,
-				958B02671EFA6F570081285F /* SJRefreshConfig.swift in Sources */,
-				958B02681EFA6F570081285F /* SJConstants.swift in Sources */,
-				958B02691EFA6F570081285F /* SJScrollViewExtention.swift in Sources */,
-				958B026A1EFA6F570081285F /* SJAnimateConfig.swift in Sources */,
-				958B026B1EFA6F570081285F /* SJRefreshManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		958B025D1EFA6F0F0081285F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 958B02561EFA6F0F0081285F /* SJLineRefresh iOS */;
-			targetProxy = 958B025C1EFA6F0F0081285F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		956407D41ECEF3AE00ED9239 /* Main.storyboard */ = {
@@ -587,52 +481,6 @@
 			};
 			name = Release;
 		};
-		958B02601EFA6F100081285F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 773A426V2P;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SJLineRefresh iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shmily.openSource.SJLineRefresh-iOS";
-				PRODUCT_NAME = SJLineRefresh;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		958B02611EFA6F100081285F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 773A426V2P;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SJLineRefresh iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shmily.openSource.SJLineRefresh-iOS";
-				PRODUCT_NAME = SJLineRefresh;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,15 +498,6 @@
 			buildConfigurations = (
 				956407E01ECEF3AE00ED9239 /* Debug */,
 				956407E11ECEF3AE00ED9239 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		958B02621EFA6F100081285F /* Build configuration list for PBXNativeTarget "SJLineRefresh iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				958B02601EFA6F100081285F /* Debug */,
-				958B02611EFA6F100081285F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -36,9 +36,7 @@ public struct SJRefreshConfig {
     public var scale: CGFloat  = 1
     
     public var backImg: UIImage?
-    
-//    public var imgCenterOffset : CGPoint?
-    
+        
     //MARK: - path's parameter
     
     /// path's line width

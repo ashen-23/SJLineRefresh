@@ -26,7 +26,6 @@ extension SJRefreshView {
 extension SJRefreshManager {
     
     func deomConfig() {
-        
         let aPath = getCurrentBundle().path(forResource: "polygon", ofType: "plist") ?? ""
         SJRefreshManager.default.defaultConfig = SJRefreshConfig(plist: aPath).build {
             

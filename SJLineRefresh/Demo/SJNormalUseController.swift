@@ -9,9 +9,7 @@
 import UIKit
 
 class SJNormalUseController: SJBaseDemoController {
-
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         let aPath = Bundle.main.path(forResource: "polygon", ofType: "plist")!
@@ -23,18 +21,14 @@ class SJNormalUseController: SJBaseDemoController {
         }
 
         tableView.sj_header = SJRefreshView(config: mConfig) { [weak self] in
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                
                 self?.tableView.endRefresh()
             })
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         super.viewDidAppear(animated)
-        
         tableView.beginRefresh()
     }
 }

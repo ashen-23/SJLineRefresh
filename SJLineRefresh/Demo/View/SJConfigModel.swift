@@ -25,20 +25,15 @@ enum HHConfigType: String {
         
         switch self {
         case .darkAlpha:
-            
             SJRefreshManager.default.defaultConfig.darkAlpha = paraValue
-
         
         case .lineWidth:
-            
             SJRefreshManager.default.defaultConfig.lineWidth = paraValue
             
         case .dropHeight:
-            
             SJRefreshManager.default.defaultConfig.dropHeight = paraValue
         
         case .startRatio:
-            
             SJRefreshManager.default.defaultConfig.animConfig.startRatio = paraValue
             
         case .endRatio:

@@ -76,29 +76,27 @@ public class SJRefreshView: UIView {
             if old != .refresing { return }
             // 恢复inset
             UIView.animate(withDuration: config.animConfig.animeDuration, animations: {
-                
                 var aInset = aScrollView.contentInset
                 aInset.top += self.insetTDelta
                 aScrollView.contentInset = aInset
                 
-            }, completion: { (isSuccess) in
-                
+            }, completion: { _ in
                 self.pullingPercent = 0
                 self.endTimer()
             })
             
             self.startFinishAnime()
-            
-        } else if state == .refresing {
+            return
+        }
+        
+        if state == .refresing {
             DispatchQueue.main.async {
                 UIView.animate(withDuration: self.config.animConfig.animeDuration, animations: {
                     let aTop = self.originalInset.top + self.config.dropHeight
                     var aInset = aScrollView.contentInset
                     aInset.top = aTop
                     aScrollView.contentInset = aInset
-                    
                     self.scrollView?.setContentOffset(CGPoint(x: 0, y: -aTop), animated: false)
-                    
                 }, completion: { [weak self] (finish) in
                     self?.refreshBlock?()
                 })
@@ -119,7 +117,6 @@ extension SJRefreshView {
         if self.window != nil {
             state = .refresing
         } else {
-            
             if state != .refresing {
                 state = .willRefresh
                 setNeedsDisplay()
@@ -128,7 +125,6 @@ extension SJRefreshView {
     }
     
     public func endRefresh() {
-        
         DispatchQueue.main.async {
             self.state = .idle
             self.pathViews.forEach { [weak self] (aPathView) in
@@ -151,13 +147,9 @@ extension SJRefreshView {
 extension SJRefreshView {
 
     fileprivate func initUI() {
-        
         backgroundColor = UIColor.clear
-        
         guard let aScroll = scrollView else { return }
-        
         let points = SJRefreshManager.default.fetchPoints(path: config.plistPath)
-        
         guard let aStarts = points.0, let aEnds = points.1  else { return }
         
         if aEnds.count != aStarts.count {
@@ -169,7 +161,6 @@ extension SJRefreshView {
         var height: CGFloat = 0
         
         for i in 0..<aStarts.count {
-            
             let aStart = NSCoder.cgPoint(for: aStarts[i])
             let aEnd = NSCoder.cgPoint(for:aEnds[i])
                         
@@ -184,7 +175,6 @@ extension SJRefreshView {
         
         // create path view
         for i in 0..<aStarts.count {
-            
             var aConfig = config
             aConfig.startPoint = NSCoder.cgPoint(for: aStarts[i])
             aConfig.endPoint = NSCoder.cgPoint(for: aEnds[i])
@@ -200,7 +190,6 @@ extension SJRefreshView {
         }
         
         if let aBackImg = config.backImg {
-            
             let aImgView = UIImageView(image: aBackImg)
             aImgView.frame = CGRect(x: 0, y: 0, width: 15, height: 15)
             
@@ -219,7 +208,6 @@ extension SJRefreshView {
     }
 
     fileprivate func addPathViews(view: SJLinePathView) {
-        
         addSubview(view)
         pathViews.append(view)
     }
@@ -245,24 +233,19 @@ extension SJRefreshView {
 
     func updatePathView() {
         let aPercent = pullingPercent ?? 0
-        
         let factor = config.animConfig.style.isStep() ? 0 : config.animConfig.animateFactor
         
         for i in 0..<pathViews.count {
-            
             let aPathView = pathViews[i]
-            
             let startPadding = (1 - factor) / CGFloat(pathViews.count) * CGFloat(i)
             let endPadding = 1 - factor - startPadding
             
             if aPercent == 1 || aPercent >= 1 - endPadding {
-                
                 aPathView.transform = .identity
                 aPathView.alpha = config.darkAlpha
                 
             } else if aPercent == 0 {
                 aPathView.setRadom()
-                
             } else {
                 let aProgress = aPercent <= startPadding ? 0 : min(1, (aPercent - startPadding) / factor)
                 aPathView.transform = CGAffineTransform(translationX: aPathView.translationX * (1 - aProgress), y: config.dropHeight * (1 - aProgress))
@@ -270,7 +253,6 @@ extension SJRefreshView {
                 aPathView.transform = aPathView.transform.rotated(by: CGFloat(Double.pi) * aProgress)
                 aPathView.transform  = aPathView.transform.scaledBy(x: aProgress, y: aProgress)
                 aPathView.alpha = aProgress * config.darkAlpha
-                
             }
         }
     }
@@ -295,7 +277,6 @@ extension SJRefreshView {
         if (aIndex == pathViews.count - 1) && state == .refresing {
             cycleAnimation()
         }
-
     }
     
     @objc func finishAnime() {
@@ -324,7 +305,6 @@ extension SJRefreshView {
         case .step: fallthrough
         case .reverse:
             normalCycle()
-
         }
     }
     
@@ -341,7 +321,6 @@ extension SJRefreshView {
     }
     
     func normalStyle(_ view: SJLinePathView) {
-        
         view.alpha = 1
         UIView.animate(withDuration: config.animConfig.stepDuration, animations: {
             view.alpha = self.config.darkAlpha
@@ -351,7 +330,6 @@ extension SJRefreshView {
     func statyCycle() {
         UIView.animate(withDuration: 0.3, animations: {
             self.pathViews.forEach{$0.alpha = self.config.darkAlpha}
-            
         }) { (finish) in
             self.startAniam()
         }
@@ -372,7 +350,6 @@ extension SJRefreshView {
     
     func startFinishAnime() {
         timer?.invalidate()
-        
         if !config.animConfig.isDismissAnime { return }
         
         timer = Timer.scheduledTimer(timeInterval: 1 / 60, target: self, selector: #selector(finishAnime), userInfo: nil, repeats: true)
@@ -380,7 +357,6 @@ extension SJRefreshView {
     }
     
     func endTimer() {
-        
         currentIndex = 0
         timer?.invalidate()
         timer = nil
@@ -391,35 +367,25 @@ extension SJRefreshView {
 extension SJRefreshView {
     
     func addObserver() {
-        
         let aOption: NSKeyValueObservingOptions = [.new, .old]
         scrollView?.addObserver(self, forKeyPath: kScrollviewContentPffset, options: aOption, context: nil)
     }
     
     func removeObserver() {
-        
         superview?.removeObserver(self, forKeyPath: kScrollviewContentPffset)
     }
     
     public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        
         if !isUserInteractionEnabled || isHidden { return }
-        
         if keyPath == kScrollviewContentPffset {
-            
             contentOffsetChanged(change: change)
         }
-        
     }
     
     func contentOffsetChanged(change: [NSKeyValueChangeKey : Any]?) {
-        
         guard let aScrollView = scrollView else { return }
-        
         if state == .refresing {
-            
             if window == nil { return }
-            
             var insetTop = max(-aScrollView.contentOffset.y, originalInset.top)
             insetTop = min(config.dropHeight + originalInset.top, insetTop)
             
@@ -441,32 +407,28 @@ extension SJRefreshView {
         let pullingPercent = (happendOffY - currentOffY) / config.dropHeight
         
         if aScrollView.isDragging { // dragging
-        
             redict(pullingPercent: pullingPercent)
-            
             if state == .idle {
-                
                 updatePathView()
                 if currentOffY < normalOffY { state = .pulling } // will refresh
                 
             } else if state == .pulling && currentOffY >= normalOffY { // normal
-                
                 state = .idle
             }
             
         } else if state == .pulling { // no in hand & will refresh
-            
             beginRefresh()
             
         } else if pullingPercent < 1 {
-            
             self.pullingPercent = pullingPercent
+            // reset refresh line
+            self.pathViews.forEach { $0.alpha = 0 }
+            
         }
     }
     
     // redic pulling percent
     fileprivate func redict(pullingPercent: CGFloat) {
-        
         if pullingPercent <= config.animConfig.startRatio {
             self.pullingPercent = 0
             
@@ -474,7 +436,6 @@ extension SJRefreshView {
             self.pullingPercent = 1
             
         } else {
-            
             self.pullingPercent = (pullingPercent - config.animConfig.startRatio) / (config.animConfig.endRatio - pullingPercent)
         }
     }

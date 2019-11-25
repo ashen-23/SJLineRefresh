@@ -12,23 +12,21 @@ import UIKit
 public class SJLinePathView: UIView {
 
     public lazy var config = SJRefreshConfig()
-    
     public var translationX: CGFloat = 0
     
     override public func draw(_ rect: CGRect) {
-        
         let aPath = UIBezierPath()
         aPath.move(to: config.startPoint)
         aPath.addLine(to: config.endPoint)
         config.lineColor?.setStroke()
         aPath.lineWidth = config.lineWidth
+//        aPath.lineCapStyle = .square
         aPath.stroke()
 
     }
     
     public init(frame: CGRect, config: SJRefreshConfig) {
         super.init(frame: frame)
-        
         self.config = config
     }
     
@@ -38,7 +36,6 @@ public class SJLinePathView: UIView {
     
     func setUp() {
         layer.anchorPoint = CGPoint(x: config.middlePoint.x / frame.size.width, y: config.middlePoint.y / frame.size.height)
-        
         frame = CGRect(x: frame.sj_x + config.middlePoint.x - frame.sj_width / 2, y: frame.sj_y + config.middlePoint.y - frame.sj_height / 2, width: frame.sj_width, height: frame.sj_height)
     }
     

@@ -16,27 +16,21 @@ class SJDemoViewController: SJBaseDemoController {
         super.viewDidLoad()
         
         configRefresh()
-        
         initHeader()
-        
         startRefresh()
     }
     
     func configRefresh() {
         
         SJRefreshManager.default.deomConfig()
-        
         tableView.sj_header = SJRefreshView.default {
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                
                 self.refreshFinish()
             })
         }
     }
     
     fileprivate func initHeader() {
-    
         headerView.frame = headerView.getHeaderFrame(width: tableView.frame.sj_width)
         
         headerView.configChanged = { [weak self] in
@@ -50,21 +44,17 @@ class SJDemoViewController: SJBaseDemoController {
     fileprivate func startRefresh() {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            
             self.tableView.beginRefresh()
         })
     }
     
     fileprivate func refreshFinish() {
-        
         tableView.endRefresh()
         print("refresh success")
     }
     
     @IBAction func doReset(_ sender: UIButton) {
-        
         SJRefreshManager.default.deomConfig()
-        
         self.tableView.sj_header?.reloadView()
         
         headerView.resetParas()
@@ -72,7 +62,6 @@ class SJDemoViewController: SJBaseDemoController {
     }
     
     @IBAction func doPrint(_ sender: UIButton) {
-        
         headerView.configInfo.forEach{$0.printMe()}
     }
 }
@@ -83,7 +72,6 @@ extension SJDemoViewController {
     
     // section
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-                
         return tableView.dequeueReusableCell(withIdentifier: "section")
     }
     
