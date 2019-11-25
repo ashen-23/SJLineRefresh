@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "SJLineRefresh"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "A easy customizable shape pull-to-refresh view in UIScrolView."
   s.swift_version = '5'
   
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                     A pull-to-refresh control that you could use your own share easily.
                    DESC
 
-  s.homepage     = "https://github.com/515783034/SJLIineRefresh"
+  s.homepage     = "https://github.com/515783034/SJLineRefresh"
   s.screenshots  = "http://upload-images.jianshu.io/upload_images/988961-5f6cc8c69fead46f.gif?imageMogr2/auto-orient/strip"
 
   s.license      = "MIT"
@@ -23,8 +23,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
 
-
-  s.source       = { :git => "https://github.com/515783034/SJLIineRefresh.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/515783034/SJLineRefresh.git", :tag => "#{s.version}" }
 
   s.source_files  = "SJLineRefresh/Sources/*.swift"
 
